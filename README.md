@@ -13,7 +13,7 @@ Last Changes
 
 Screenshots
 ============
-<img width="160" src="/Media/Screenshots/main_window.png.png" />
+<img width="160" src="/Media/Screenshots/main_window.png" />
 
 Download
 ============
