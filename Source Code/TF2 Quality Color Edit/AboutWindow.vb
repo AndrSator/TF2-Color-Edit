@@ -3,15 +3,14 @@
 Public Class AboutWindow
     Private Sub Form2_Load() Handles MyBase.Load
         VersionLabel.Text = System.String.Format(VersionLabel.Text, My.Application.Info.Version.Major, My.Application.Info.Version.Minor, My.Application.Info.Version.Build, My.Application.Info.Version.Revision)
-        'ICON
-        'Icon = My.Resources.SteamCMDGUI_Icon
+        Icon = My.Resources.TF2ColorEdit_Icon
     End Sub
 
     Private Sub LicenseURL_Click() Handles LicenseURL.Click
         If File.Exists("License.txt") Then
             Process.Start("License.txt")
         Else
-            Process.Start("https://raw.github.com/DioJoestar/TF2-Color-Edit/master/License.txt")
+            Process.Start("https://raw.githubusercontent.com/DioJoestar/TF2-Color-Edit/master/Documentation/License.txt")
         End If
     End Sub
 
@@ -19,7 +18,7 @@ Public Class AboutWindow
         If File.Exists("Changelog.txt") Then
             Process.Start("Changelog.txt")
         Else
-            Process.Start("https://raw.github.com/DioJoestar/TF2-Color-Edit/master/Changelog.txt")
+            Process.Start("https://raw.githubusercontent.com/DioJoestar/TF2-Color-Edit/master/Documentation/Changelog.txt")
         End If
     End Sub
 

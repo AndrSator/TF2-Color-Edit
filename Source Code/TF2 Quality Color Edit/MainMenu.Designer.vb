@@ -159,13 +159,13 @@ Partial Class MainMenu
         Me.ColorsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DefaultToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RedPillsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ColorDialog1 = New System.Windows.Forms.ColorDialog()
         Me.FileOpenButton = New System.Windows.Forms.Button()
         Me.FilePathTextBox = New System.Windows.Forms.TextBox()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.Status = New System.Windows.Forms.TextBox()
-        Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GroupBox1.SuspendLayout()
         Me.Tab.SuspendLayout()
         Me.QualityTab.SuspendLayout()
@@ -1516,14 +1516,14 @@ Partial Class MainMenu
         'OpenToolStripMenuItem
         '
         Me.OpenToolStripMenuItem.Name = "OpenToolStripMenuItem"
-        Me.OpenToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.OpenToolStripMenuItem.Size = New System.Drawing.Size(100, 22)
         Me.OpenToolStripMenuItem.Text = "Load"
         '
         'SaveToolStripMenuItem
         '
         Me.SaveToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.QualitiesToolStripMenuItem, Me.AttributesToolStripMenuItem})
         Me.SaveToolStripMenuItem.Name = "SaveToolStripMenuItem"
-        Me.SaveToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.SaveToolStripMenuItem.Size = New System.Drawing.Size(100, 22)
         Me.SaveToolStripMenuItem.Text = "Save"
         '
         'QualitiesToolStripMenuItem
@@ -1541,12 +1541,12 @@ Partial Class MainMenu
         'ToolStripSeparator1
         '
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(149, 6)
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(97, 6)
         '
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(100, 22)
         Me.ExitToolStripMenuItem.Text = "Exit"
         '
         'ColorsToolStripMenuItem
@@ -1567,6 +1567,19 @@ Partial Class MainMenu
         Me.RedPillsToolStripMenuItem.Name = "RedPillsToolStripMenuItem"
         Me.RedPillsToolStripMenuItem.Size = New System.Drawing.Size(118, 22)
         Me.RedPillsToolStripMenuItem.Text = "RedPill's"
+        '
+        'HelpToolStripMenuItem
+        '
+        Me.HelpToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AboutToolStripMenuItem})
+        Me.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem"
+        Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
+        Me.HelpToolStripMenuItem.Text = "Help"
+        '
+        'AboutToolStripMenuItem
+        '
+        Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
+        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(107, 22)
+        Me.AboutToolStripMenuItem.Text = "About"
         '
         'FileOpenButton
         '
@@ -1600,19 +1613,6 @@ Partial Class MainMenu
         Me.Status.Size = New System.Drawing.Size(676, 20)
         Me.Status.TabIndex = 3
         '
-        'HelpToolStripMenuItem
-        '
-        Me.HelpToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AboutToolStripMenuItem})
-        Me.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem"
-        Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
-        Me.HelpToolStripMenuItem.Text = "Help"
-        '
-        'AboutToolStripMenuItem
-        '
-        Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
-        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.AboutToolStripMenuItem.Text = "About"
-        '
         'MainMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1624,6 +1624,8 @@ Partial Class MainMenu
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
+        Me.MaximumSize = New System.Drawing.Size(716, 454)
+        Me.MinimumSize = New System.Drawing.Size(716, 454)
         Me.Name = "MainMenu"
         Me.Text = "TF2 Color Edit"
         Me.GroupBox1.ResumeLayout(False)

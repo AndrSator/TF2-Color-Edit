@@ -85,6 +85,7 @@ Partial Class AboutWindow
         '
         'PictureBox2
         '
+        Me.PictureBox2.BackgroundImage = Global.TF2_Color_Edit.My.Resources.Resources.TF2ColorEdit_Logo
         resources.ApplyResources(Me.PictureBox2, "PictureBox2")
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.TabStop = False

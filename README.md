@@ -1,5 +1,6 @@
 TF2 Color Edit
 ============
+<img align="left" src="/Media/Logo_TF2ColorEdit.png" />
 This simple tool allows the user to edit the colors of the [qualities] (http://wiki.teamfortress.com/wiki/Item_quality) and the attributes of the items. Just extrat the file ClientScheme.res from the VPK tf2_misc_dir.vpk, or use the one of your custom HUD, edit, preview, and save.
 
 License
@@ -8,8 +9,11 @@ TF2 Color Edit by RedPill is licensed under a [Creative Commons Attribution-NonC
 
 Last Changes
 ============
-######Version 1.0.0.0
-* Pre-Release
+######Version 1.0.0.1
+* Added icon and logo
+* Locked the window size
+* New color for the Genuine quality of the RedPill's preset (#008040)
+* Fixed URL of Changelog and License buttons
 
 Screenshots
 ============

@@ -7,6 +7,9 @@ End Module
 
 Public Class MainMenu
     Private Sub MainMenu_Load() Handles MyBase.Load
+        Icon = My.Resources.TF2ColorEdit_Icon
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0F, 13.0F)
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         ItemThumbnail.BackColor = ColorTranslator.FromHtml("#3C352E")
         ItemNameLabel.BackColor = ColorTranslator.FromHtml("#2A2725")
         ItemNameLabel.ForeColor = ColorTranslator.FromHtml("#FFD700")
@@ -904,9 +907,9 @@ Public Class MainMenu
         RGB_R_Normal.Text = "178"
         RGB_G_Normal.Text = "178"
         RGB_B_Normal.Text = "178"
-        RGB_R_Genuine.Text = "79"
-        RGB_G_Genuine.Text = "230"
-        RGB_B_Genuine.Text = "79"
+        RGB_R_Genuine.Text = "0"
+        RGB_G_Genuine.Text = "128"
+        RGB_B_Genuine.Text = "64"
         RGB_R_Vintage.Text = "94"
         RGB_G_Vintage.Text = "152"
         RGB_B_Vintage.Text = "217"
