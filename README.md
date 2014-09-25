@@ -9,11 +9,8 @@ TF2 Color Edit by RedPill is licensed under a [Creative Commons Attribution-NonC
 
 Last Changes
 ============
-######Version 1.0.0.1
-* Added icon and logo
-* Locked the window size
-* New color for the Genuine quality of the RedPill's preset (#008040)
-* Fixed URL of Changelog and License buttons
+######Version 1.0.0.2
+* Added color for the label Limited
 
 Screenshots
 ============

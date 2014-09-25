@@ -88,6 +88,7 @@ Partial Class MainMenu
         Me.ColorPickSetN = New System.Windows.Forms.Button()
         Me.RGB_B_Negative = New System.Windows.Forms.NumericUpDown()
         Me.ColorPickPositive = New System.Windows.Forms.Button()
+        Me.RGB_B_Limited = New System.Windows.Forms.NumericUpDown()
         Me.RGB_B_Craft = New System.Windows.Forms.NumericUpDown()
         Me.ColorPickSet = New System.Windows.Forms.Button()
         Me.RGB_B_Positive = New System.Windows.Forms.NumericUpDown()
@@ -100,6 +101,7 @@ Partial Class MainMenu
         Me.ColorPickUse = New System.Windows.Forms.Button()
         Me.ColorPickNegative = New System.Windows.Forms.Button()
         Me.RGB_G_Use = New System.Windows.Forms.NumericUpDown()
+        Me.ColorPickLimited = New System.Windows.Forms.Button()
         Me.ColorPickCraft = New System.Windows.Forms.Button()
         Me.RGB_G_Set = New System.Windows.Forms.NumericUpDown()
         Me.Positive = New System.Windows.Forms.Label()
@@ -112,7 +114,9 @@ Partial Class MainMenu
         Me.RGB_R_Set = New System.Windows.Forms.NumericUpDown()
         Me.Negative = New System.Windows.Forms.Label()
         Me.RGB_R_Negative = New System.Windows.Forms.NumericUpDown()
+        Me.Label11 = New System.Windows.Forms.Label()
         Me.Label23 = New System.Windows.Forms.Label()
+        Me.RGB_G_Limited = New System.Windows.Forms.NumericUpDown()
         Me.RGB_G_Craft = New System.Windows.Forms.NumericUpDown()
         Me.HexPositive = New System.Windows.Forms.TextBox()
         Me.RGB_R_Positive = New System.Windows.Forms.NumericUpDown()
@@ -120,6 +124,8 @@ Partial Class MainMenu
         Me.RGB_G_SetN = New System.Windows.Forms.NumericUpDown()
         Me.HexSet = New System.Windows.Forms.TextBox()
         Me.RGB_G_Neutral = New System.Windows.Forms.NumericUpDown()
+        Me.HexLimited = New System.Windows.Forms.TextBox()
+        Me.RGB_R_Limited = New System.Windows.Forms.NumericUpDown()
         Me.HexCraft = New System.Windows.Forms.TextBox()
         Me.RGB_R_Craft = New System.Windows.Forms.NumericUpDown()
         Me.RGB_G_Level = New System.Windows.Forms.NumericUpDown()
@@ -166,6 +172,7 @@ Partial Class MainMenu
         Me.FilePathTextBox = New System.Windows.Forms.TextBox()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.Status = New System.Windows.Forms.TextBox()
+        Me.LimitedLabel = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.Tab.SuspendLayout()
         Me.QualityTab.SuspendLayout()
@@ -200,6 +207,7 @@ Partial Class MainMenu
         CType(Me.RGB_B_Set, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RGB_B_Use, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RGB_B_Negative, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RGB_B_Limited, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RGB_B_Craft, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RGB_B_Positive, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RGB_B_SetN, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -212,10 +220,12 @@ Partial Class MainMenu
         CType(Me.RGB_R_Use, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RGB_R_Set, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RGB_R_Negative, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RGB_G_Limited, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RGB_G_Craft, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RGB_R_Positive, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RGB_G_SetN, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RGB_G_Neutral, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RGB_R_Limited, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RGB_R_Craft, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RGB_G_Level, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RGB_R_SetN, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -245,6 +255,7 @@ Partial Class MainMenu
         Me.GroupBox1.Controls.Add(Me.NegativeLabel)
         Me.GroupBox1.Controls.Add(Me.NeutralLabel)
         Me.GroupBox1.Controls.Add(Me.PositiveLabel)
+        Me.GroupBox1.Controls.Add(Me.LimitedLabel)
         Me.GroupBox1.Controls.Add(Me.LevelLabel)
         Me.GroupBox1.Controls.Add(Me.ItemNameLabel)
         Me.GroupBox1.Controls.Add(Me.ItemThumbnail)
@@ -828,6 +839,7 @@ Partial Class MainMenu
         Me.AttributesTab.Controls.Add(Me.ColorPickSetN)
         Me.AttributesTab.Controls.Add(Me.RGB_B_Negative)
         Me.AttributesTab.Controls.Add(Me.ColorPickPositive)
+        Me.AttributesTab.Controls.Add(Me.RGB_B_Limited)
         Me.AttributesTab.Controls.Add(Me.RGB_B_Craft)
         Me.AttributesTab.Controls.Add(Me.ColorPickSet)
         Me.AttributesTab.Controls.Add(Me.RGB_B_Positive)
@@ -840,6 +852,7 @@ Partial Class MainMenu
         Me.AttributesTab.Controls.Add(Me.ColorPickUse)
         Me.AttributesTab.Controls.Add(Me.ColorPickNegative)
         Me.AttributesTab.Controls.Add(Me.RGB_G_Use)
+        Me.AttributesTab.Controls.Add(Me.ColorPickLimited)
         Me.AttributesTab.Controls.Add(Me.ColorPickCraft)
         Me.AttributesTab.Controls.Add(Me.RGB_G_Set)
         Me.AttributesTab.Controls.Add(Me.Positive)
@@ -852,7 +865,9 @@ Partial Class MainMenu
         Me.AttributesTab.Controls.Add(Me.RGB_R_Set)
         Me.AttributesTab.Controls.Add(Me.Negative)
         Me.AttributesTab.Controls.Add(Me.RGB_R_Negative)
+        Me.AttributesTab.Controls.Add(Me.Label11)
         Me.AttributesTab.Controls.Add(Me.Label23)
+        Me.AttributesTab.Controls.Add(Me.RGB_G_Limited)
         Me.AttributesTab.Controls.Add(Me.RGB_G_Craft)
         Me.AttributesTab.Controls.Add(Me.HexPositive)
         Me.AttributesTab.Controls.Add(Me.RGB_R_Positive)
@@ -860,6 +875,8 @@ Partial Class MainMenu
         Me.AttributesTab.Controls.Add(Me.RGB_G_SetN)
         Me.AttributesTab.Controls.Add(Me.HexSet)
         Me.AttributesTab.Controls.Add(Me.RGB_G_Neutral)
+        Me.AttributesTab.Controls.Add(Me.HexLimited)
+        Me.AttributesTab.Controls.Add(Me.RGB_R_Limited)
         Me.AttributesTab.Controls.Add(Me.HexCraft)
         Me.AttributesTab.Controls.Add(Me.RGB_R_Craft)
         Me.AttributesTab.Controls.Add(Me.RGB_G_Level)
@@ -936,6 +953,14 @@ Partial Class MainMenu
         Me.ColorPickPositive.TabIndex = 44
         Me.ColorPickPositive.TabStop = False
         Me.ColorPickPositive.UseVisualStyleBackColor = True
+        '
+        'RGB_B_Limited
+        '
+        Me.RGB_B_Limited.Location = New System.Drawing.Point(160, 213)
+        Me.RGB_B_Limited.Maximum = New Decimal(New Integer() {255, 0, 0, 0})
+        Me.RGB_B_Limited.Name = "RGB_B_Limited"
+        Me.RGB_B_Limited.Size = New System.Drawing.Size(38, 20)
+        Me.RGB_B_Limited.TabIndex = 68
         '
         'RGB_B_Craft
         '
@@ -1045,6 +1070,16 @@ Partial Class MainMenu
         Me.RGB_G_Use.Name = "RGB_G_Use"
         Me.RGB_G_Use.Size = New System.Drawing.Size(38, 20)
         Me.RGB_G_Use.TabIndex = 63
+        '
+        'ColorPickLimited
+        '
+        Me.ColorPickLimited.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ColorPickLimited.Location = New System.Drawing.Point(204, 213)
+        Me.ColorPickLimited.Name = "ColorPickLimited"
+        Me.ColorPickLimited.Size = New System.Drawing.Size(23, 20)
+        Me.ColorPickLimited.TabIndex = 38
+        Me.ColorPickLimited.TabStop = False
+        Me.ColorPickLimited.UseVisualStyleBackColor = True
         '
         'ColorPickCraft
         '
@@ -1158,6 +1193,17 @@ Partial Class MainMenu
         Me.RGB_R_Negative.Size = New System.Drawing.Size(38, 20)
         Me.RGB_R_Negative.TabIndex = 50
         '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Label11.Location = New System.Drawing.Point(26, 216)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(40, 13)
+        Me.Label11.TabIndex = 49
+        Me.Label11.Text = "Limited"
+        Me.Label11.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
         'Label23
         '
         Me.Label23.AutoSize = True
@@ -1168,6 +1214,14 @@ Partial Class MainMenu
         Me.Label23.TabIndex = 49
         Me.Label23.Text = "Trade/Craft"
         Me.Label23.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'RGB_G_Limited
+        '
+        Me.RGB_G_Limited.Location = New System.Drawing.Point(116, 213)
+        Me.RGB_G_Limited.Maximum = New Decimal(New Integer() {255, 0, 0, 0})
+        Me.RGB_G_Limited.Name = "RGB_G_Limited"
+        Me.RGB_G_Limited.Size = New System.Drawing.Size(38, 20)
+        Me.RGB_G_Limited.TabIndex = 67
         '
         'RGB_G_Craft
         '
@@ -1224,6 +1278,22 @@ Partial Class MainMenu
         Me.RGB_G_Neutral.Name = "RGB_G_Neutral"
         Me.RGB_G_Neutral.Size = New System.Drawing.Size(38, 20)
         Me.RGB_G_Neutral.TabIndex = 47
+        '
+        'HexLimited
+        '
+        Me.HexLimited.Location = New System.Drawing.Point(233, 213)
+        Me.HexLimited.MaxLength = 6
+        Me.HexLimited.Name = "HexLimited"
+        Me.HexLimited.Size = New System.Drawing.Size(54, 20)
+        Me.HexLimited.TabIndex = 69
+        '
+        'RGB_R_Limited
+        '
+        Me.RGB_R_Limited.Location = New System.Drawing.Point(72, 213)
+        Me.RGB_R_Limited.Maximum = New Decimal(New Integer() {255, 0, 0, 0})
+        Me.RGB_R_Limited.Name = "RGB_R_Limited"
+        Me.RGB_R_Limited.Size = New System.Drawing.Size(38, 20)
+        Me.RGB_R_Limited.TabIndex = 66
         '
         'HexCraft
         '
@@ -1382,7 +1452,7 @@ Partial Class MainMenu
         '
         Me.CraftLabel.BackColor = System.Drawing.SystemColors.Control
         Me.CraftLabel.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CraftLabel.Location = New System.Drawing.Point(13, 305)
+        Me.CraftLabel.Location = New System.Drawing.Point(13, 299)
         Me.CraftLabel.Name = "CraftLabel"
         Me.CraftLabel.Size = New System.Drawing.Size(320, 16)
         Me.CraftLabel.TabIndex = 0
@@ -1393,7 +1463,7 @@ Partial Class MainMenu
         '
         Me.UseLabel.BackColor = System.Drawing.SystemColors.Control
         Me.UseLabel.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.UseLabel.Location = New System.Drawing.Point(13, 288)
+        Me.UseLabel.Location = New System.Drawing.Point(13, 282)
         Me.UseLabel.Name = "UseLabel"
         Me.UseLabel.Size = New System.Drawing.Size(320, 16)
         Me.UseLabel.TabIndex = 0
@@ -1404,7 +1474,7 @@ Partial Class MainMenu
         '
         Me.SetLabel.BackColor = System.Drawing.SystemColors.Control
         Me.SetLabel.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.SetLabel.Location = New System.Drawing.Point(13, 271)
+        Me.SetLabel.Location = New System.Drawing.Point(13, 265)
         Me.SetLabel.Name = "SetLabel"
         Me.SetLabel.Size = New System.Drawing.Size(320, 16)
         Me.SetLabel.TabIndex = 0
@@ -1415,7 +1485,7 @@ Partial Class MainMenu
         '
         Me.SetNLabel.BackColor = System.Drawing.SystemColors.Control
         Me.SetNLabel.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.SetNLabel.Location = New System.Drawing.Point(13, 254)
+        Me.SetNLabel.Location = New System.Drawing.Point(13, 248)
         Me.SetNLabel.Name = "SetNLabel"
         Me.SetNLabel.Size = New System.Drawing.Size(320, 16)
         Me.SetNLabel.TabIndex = 0
@@ -1426,7 +1496,7 @@ Partial Class MainMenu
         '
         Me.NegativeLabel.BackColor = System.Drawing.SystemColors.Control
         Me.NegativeLabel.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.NegativeLabel.Location = New System.Drawing.Point(13, 237)
+        Me.NegativeLabel.Location = New System.Drawing.Point(13, 231)
         Me.NegativeLabel.Name = "NegativeLabel"
         Me.NegativeLabel.Size = New System.Drawing.Size(320, 16)
         Me.NegativeLabel.TabIndex = 0
@@ -1437,7 +1507,7 @@ Partial Class MainMenu
         '
         Me.NeutralLabel.BackColor = System.Drawing.SystemColors.Control
         Me.NeutralLabel.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.NeutralLabel.Location = New System.Drawing.Point(13, 220)
+        Me.NeutralLabel.Location = New System.Drawing.Point(13, 214)
         Me.NeutralLabel.Name = "NeutralLabel"
         Me.NeutralLabel.Size = New System.Drawing.Size(320, 16)
         Me.NeutralLabel.TabIndex = 0
@@ -1448,7 +1518,7 @@ Partial Class MainMenu
         '
         Me.PositiveLabel.BackColor = System.Drawing.SystemColors.Control
         Me.PositiveLabel.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.PositiveLabel.Location = New System.Drawing.Point(13, 203)
+        Me.PositiveLabel.Location = New System.Drawing.Point(13, 197)
         Me.PositiveLabel.Name = "PositiveLabel"
         Me.PositiveLabel.Size = New System.Drawing.Size(320, 16)
         Me.PositiveLabel.TabIndex = 0
@@ -1459,7 +1529,7 @@ Partial Class MainMenu
         '
         Me.LevelLabel.BackColor = System.Drawing.SystemColors.Control
         Me.LevelLabel.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LevelLabel.Location = New System.Drawing.Point(13, 186)
+        Me.LevelLabel.Location = New System.Drawing.Point(13, 180)
         Me.LevelLabel.Name = "LevelLabel"
         Me.LevelLabel.Size = New System.Drawing.Size(320, 16)
         Me.LevelLabel.TabIndex = 0
@@ -1470,7 +1540,7 @@ Partial Class MainMenu
         '
         Me.ItemNameLabel.BackColor = System.Drawing.SystemColors.Control
         Me.ItemNameLabel.Font = New System.Drawing.Font("TF2 Build", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ItemNameLabel.Location = New System.Drawing.Point(13, 164)
+        Me.ItemNameLabel.Location = New System.Drawing.Point(13, 141)
         Me.ItemNameLabel.Name = "ItemNameLabel"
         Me.ItemNameLabel.Size = New System.Drawing.Size(320, 21)
         Me.ItemNameLabel.TabIndex = 0
@@ -1482,9 +1552,9 @@ Partial Class MainMenu
         Me.ItemThumbnail.BackgroundImage = Global.TF2_Color_Edit.My.Resources.Resources.spy_hat
         Me.ItemThumbnail.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ItemThumbnail.InitialImage = Nothing
-        Me.ItemThumbnail.Location = New System.Drawing.Point(109, 28)
+        Me.ItemThumbnail.Location = New System.Drawing.Point(127, 30)
         Me.ItemThumbnail.Name = "ItemThumbnail"
-        Me.ItemThumbnail.Size = New System.Drawing.Size(128, 128)
+        Me.ItemThumbnail.Size = New System.Drawing.Size(92, 87)
         Me.ItemThumbnail.TabIndex = 1
         Me.ItemThumbnail.TabStop = False
         '
@@ -1613,6 +1683,17 @@ Partial Class MainMenu
         Me.Status.Size = New System.Drawing.Size(676, 20)
         Me.Status.TabIndex = 3
         '
+        'LimitedLabel
+        '
+        Me.LimitedLabel.BackColor = System.Drawing.SystemColors.Control
+        Me.LimitedLabel.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LimitedLabel.Location = New System.Drawing.Point(13, 163)
+        Me.LimitedLabel.Name = "LimitedLabel"
+        Me.LimitedLabel.Size = New System.Drawing.Size(320, 16)
+        Me.LimitedLabel.TabIndex = 0
+        Me.LimitedLabel.Text = "Limited Level 30 Hat"
+        Me.LimitedLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
         'MainMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1665,6 +1746,7 @@ Partial Class MainMenu
         CType(Me.RGB_B_Set, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RGB_B_Use, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RGB_B_Negative, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RGB_B_Limited, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RGB_B_Craft, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RGB_B_Positive, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RGB_B_SetN, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1677,10 +1759,12 @@ Partial Class MainMenu
         CType(Me.RGB_R_Use, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RGB_R_Set, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RGB_R_Negative, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RGB_G_Limited, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RGB_G_Craft, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RGB_R_Positive, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RGB_G_SetN, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RGB_G_Neutral, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RGB_R_Limited, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RGB_R_Craft, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RGB_G_Level, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RGB_R_SetN, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1838,5 +1922,12 @@ Partial Class MainMenu
     Friend WithEvents Status As System.Windows.Forms.TextBox
     Friend WithEvents HelpToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents AboutToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents RGB_B_Limited As System.Windows.Forms.NumericUpDown
+    Friend WithEvents ColorPickLimited As System.Windows.Forms.Button
+    Friend WithEvents Label11 As System.Windows.Forms.Label
+    Friend WithEvents RGB_G_Limited As System.Windows.Forms.NumericUpDown
+    Friend WithEvents HexLimited As System.Windows.Forms.TextBox
+    Friend WithEvents RGB_R_Limited As System.Windows.Forms.NumericUpDown
+    Friend WithEvents LimitedLabel As System.Windows.Forms.Label
 
 End Class

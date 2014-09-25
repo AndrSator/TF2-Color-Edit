@@ -13,6 +13,8 @@ Public Class MainMenu
         ItemThumbnail.BackColor = ColorTranslator.FromHtml("#3C352E")
         ItemNameLabel.BackColor = ColorTranslator.FromHtml("#2A2725")
         ItemNameLabel.ForeColor = ColorTranslator.FromHtml("#FFD700")
+        LimitedLabel.BackColor = ColorTranslator.FromHtml("#2A2725")
+        LimitedLabel.ForeColor = ColorTranslator.FromHtml("#FFD100")
         LevelLabel.BackColor = ColorTranslator.FromHtml("#2A2725")
         LevelLabel.ForeColor = ColorTranslator.FromHtml("#756B5E")
         PositiveLabel.BackColor = ColorTranslator.FromHtml("#2A2725")
@@ -762,6 +764,47 @@ Public Class MainMenu
         End If
     End Sub
 
+    'Limited
+    Private Sub RGB_Limited_ValueChanged() Handles RGB_R_Limited.ValueChanged, RGB_G_Limited.ValueChanged, RGB_B_Limited.ValueChanged
+        Dim R As Integer = Integer.Parse(RGB_R_Limited.Text)
+        Dim G As Integer = Integer.Parse(RGB_G_Limited.Text)
+        Dim B As Integer = Integer.Parse(RGB_B_Limited.Text)
+        HexLimited.Text = String.Format("{0}{1}{2}", R.ToString("X").PadLeft(2, "0"), G.ToString("X").PadLeft(2, "0"), B.ToString("X").PadLeft(2, "0"))
+        ColorPickLimited.BackColor = Color.FromArgb(R, G, B)
+        LimitedLabel.ForeColor = Color.FromArgb(R, G, B)
+    End Sub
+
+    Private Sub ColorPickLimited_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ColorPickLimited.Click
+        If (ColorDialog1.ShowDialog() = Windows.Forms.DialogResult.OK) Then
+            ColorPickLimited.BackColor = ColorDialog1.Color
+            LimitedLabel.ForeColor = ColorDialog1.Color
+            RGB_R_Limited.Text = ColorDialog1.Color.R
+            RGB_G_Limited.Text = ColorDialog1.Color.G
+            RGB_B_Limited.Text = ColorDialog1.Color.B
+            HexLimited.Text = String.Format("{0:X2}{1:X2}{2:X2}", ColorDialog1.Color.R, ColorDialog1.Color.G, ColorDialog1.Color.B)
+        End If
+    End Sub
+
+    Private Sub HexLimited_KeyPress(ByVal sender As Object, ByVal e As Windows.Forms.KeyPressEventArgs) Handles HexLimited.KeyPress
+        If Char.IsLower(e.KeyChar) Then
+            e.KeyChar = Char.ToUpper(e.KeyChar)
+            If InStr(1, "1234567890ABCDEF", e.KeyChar) = 0 Then
+                e.KeyChar = ""
+            End If
+        End If
+        If e.KeyChar = ChrW(Keys.Enter) Then
+            HexColor = HexLimited.Text
+            Red = Val("&H" & Mid(HexColor, 1, 2))
+            Green = Val("&H" & Mid(HexColor, 3, 2))
+            Blue = Val("&H" & Mid(HexColor, 5, 2))
+            RGB_R_Limited.Text = Red
+            RGB_G_Limited.Text = Green
+            RGB_B_Limited.Text = Blue
+            ColorPickLimited.BackColor = Color.FromArgb(Red, Green, Blue)
+            LimitedLabel.ForeColor = Color.FromArgb(Red, Green, Blue)
+        End If
+    End Sub
+
     'Save file (Qualities)
     Private Sub SaveButton_Click() Handles SaveButton.Click, QualitiesToolStripMenuItem.Click
         If Not ResFile = Nothing Then
@@ -835,6 +878,9 @@ Public Class MainMenu
                 If lines(x).Trim().StartsWith(Chr(34) & "ItemFlags" & Chr(34)) Then
                     lines(x) = "		" & Chr(34) & "ItemFlags" & Chr(34) & "								" & Chr(34) & RGB_R_Craft.Text & " " & RGB_G_Craft.Text & " " & RGB_B_Craft.Text & " 255" & Chr(34)
                 End If
+                If lines(x).Trim().StartsWith(Chr(34) & "ItemLimitedQuantity" & Chr(34)) Then
+                    lines(x) = "		" & Chr(34) & "ItemLimitedQuantity" & Chr(34) & "					" & Chr(34) & RGB_R_Limited.Text & " " & RGB_G_Limited.Text & " " & RGB_B_Limited.Text & " 255" & Chr(34)
+                End If
             Next
             File.WriteAllLines(ResFile, lines)
             Status.Text = "Attributes saved!"
@@ -877,6 +923,9 @@ Public Class MainMenu
         RGB_G_Unique.Text = "215"
         RGB_B_Unique.Text = "0"
         'Attributes
+        RGB_R_Limited.Text = "255"
+        RGB_G_Limited.Text = "209"
+        RGB_B_Limited.Text = "0"
         RGB_R_Level.Text = "117"
         RGB_G_Level.Text = "107"
         RGB_B_Level.Text = "94"
@@ -932,6 +981,9 @@ Public Class MainMenu
         RGB_G_Unique.Text = "178"
         RGB_B_Unique.Text = "178"
         'Attributes
+        RGB_R_Limited.Text = "235"
+        RGB_G_Limited.Text = "235"
+        RGB_B_Limited.Text = "235"
         RGB_R_Level.Text = "128"
         RGB_G_Level.Text = "128"
         RGB_B_Level.Text = "128"
