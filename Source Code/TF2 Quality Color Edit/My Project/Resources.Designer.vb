@@ -83,6 +83,16 @@ Namespace My.Resources
         '''<summary>
         '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property minigun() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("minigun", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property spy_hat() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("spy_hat", resourceCulture)

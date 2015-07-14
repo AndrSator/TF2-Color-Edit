@@ -1,5 +1,5 @@
 ================= Original Author =====================================
-|	Raúl 'RedPill AKA Dio Joestar' Jiménez
+|	Raúl 'Dio Joestar' Jiménez Carrillo
 |
 ================= Special Thanks  =====================================
 |	Steve    	~ Help with the code at Stack Overflow    	(http://stackoverflow.com/questions/25810800/read-file-search-text-and-replace-all-the-line)

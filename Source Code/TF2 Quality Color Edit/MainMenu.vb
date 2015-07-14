@@ -3,9 +3,35 @@
 Module Module1
     Public HexColor, Red, Green, Blue As String
     Public ResFile As String
+    Public RarityName As String
 End Module
 
 Public Class MainMenu
+    Sub Show_Panel1()
+        ItemThumbnail.BackgroundImage = TF2_Color_Edit.My.Resources.Resources.spy_hat
+        Panel1.Show()
+        Panel2.Hide()
+        ItemNameEdit_TextBox.Show()
+        ItemNameEdit_TextBox2.Hide()
+    End Sub
+
+    Sub Hide_Panel1()
+        ItemThumbnail.BackgroundImage = TF2_Color_Edit.My.Resources.Resources.minigun
+        Panel1.Hide()
+        Panel2.Show()
+        ItemNameEdit_TextBox.Hide()
+        ItemNameEdit_TextBox2.Show()
+    End Sub
+
+    Sub RarityNameLabel()
+        Rarity1Label.Text = "Red Rock Roscoe " & RarityName
+        Rarity2Label.Text = "Blasted Bombardier " & RarityName
+        Rarity3Label.Text = "Barn Burner Flame " & RarityName
+        Rarity4Label.Text = "Spark of Life " & RarityName
+        Rarity5Label.Text = "Shell Shocker " & RarityName
+        Rarity6Label.Text = "Tartan Torpedo " & RarityName
+    End Sub
+
     Private Sub MainMenu_Load() Handles MyBase.Load
         Icon = My.Resources.TF2ColorEdit_Icon
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0F, 13.0F)
@@ -31,6 +57,27 @@ Public Class MainMenu
         UseLabel.ForeColor = ColorTranslator.FromHtml("#00A000")
         CraftLabel.BackColor = ColorTranslator.FromHtml("#2A2725")
         CraftLabel.ForeColor = ColorTranslator.FromHtml("#756B5E")
+
+        Panel1.BackColor = ColorTranslator.FromHtml("#2a2725")
+        Panel2.BackColor = ColorTranslator.FromHtml("#2a2725")
+
+        Show_Panel1()
+
+        ItemNameLabel2.BackColor = ColorTranslator.FromHtml("#2A2725")
+        ItemNameLabel2.ForeColor = ColorTranslator.FromHtml("#FFD700")
+        Rarity1Label.BackColor = ColorTranslator.FromHtml("#2A2725")
+        Rarity1Label.ForeColor = ColorTranslator.FromHtml("#B0C3D9")
+        Rarity2Label.BackColor = ColorTranslator.FromHtml("#2A2725")
+        Rarity2Label.ForeColor = ColorTranslator.FromHtml("#5E98D9")
+        Rarity3Label.BackColor = ColorTranslator.FromHtml("#2A2725")
+        Rarity3Label.ForeColor = ColorTranslator.FromHtml("#4B69FF")
+        Rarity4Label.BackColor = ColorTranslator.FromHtml("#2A2725")
+        Rarity4Label.ForeColor = ColorTranslator.FromHtml("#8847FF")
+        Rarity5Label.BackColor = ColorTranslator.FromHtml("#2A2725")
+        Rarity5Label.ForeColor = ColorTranslator.FromHtml("#D32CE6")
+        Rarity6Label.BackColor = ColorTranslator.FromHtml("#2A2725")
+        Rarity6Label.ForeColor = ColorTranslator.FromHtml("#EB4B4B")
+        RarityNameLabel()
     End Sub
 
     'Load file
@@ -43,6 +90,7 @@ Public Class MainMenu
             Tab.Enabled = True
             SaveButton.Enabled = True
             SaveButton2.Enabled = True
+            SaveButton3.Enabled = True
         End If
     End Sub
 
@@ -58,6 +106,13 @@ Public Class MainMenu
     'Name edit
     Private Sub ItemNameEdit_Type() Handles ItemNameEdit_TextBox.TextChanged
         ItemNameLabel.Text = ItemNameEdit_TextBox.Text
+    End Sub
+
+    'Name edit Rarity
+    Private Sub ItemNameEdit2_Type() Handles ItemNameEdit_TextBox2.TextChanged
+        RarityName = ItemNameEdit_TextBox2.Text
+        RarityNameLabel()
+        ItemNameLabel2.Text = ItemNameEdit_TextBox2.Text
     End Sub
 
     'Color Edits
@@ -805,6 +860,270 @@ Public Class MainMenu
         End If
     End Sub
 
+    'Common Rarity
+    'Color from RGB values
+    Private Sub RGB_Common_ValueChanged() Handles RGB_R_Common.ValueChanged, RGB_G_Common.ValueChanged, RGB_B_Common.ValueChanged
+        Dim R As Integer = Integer.Parse(RGB_R_Common.Text)
+        Dim G As Integer = Integer.Parse(RGB_G_Common.Text)
+        Dim B As Integer = Integer.Parse(RGB_B_Common.Text)
+        HexCommon.Text = String.Format("{0}{1}{2}", R.ToString("X").PadLeft(2, "0"), G.ToString("X").PadLeft(2, "0"), B.ToString("X").PadLeft(2, "0"))
+        ColorPickCommon.BackColor = Color.FromArgb(R, G, B)
+        ItemNameLabel2.ForeColor = Color.FromArgb(R, G, B)
+        Rarity1Label.ForeColor = Color.FromArgb(R, G, B)
+    End Sub
+
+    'Color from pick
+    Private Sub ColorPickCommon_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ColorPickCommon.Click
+        If (ColorDialog1.ShowDialog() = Windows.Forms.DialogResult.OK) Then
+            ColorPickCommon.BackColor = ColorDialog1.Color
+            ItemNameLabel2.ForeColor = ColorDialog1.Color
+            Rarity1Label.ForeColor = ColorDialog1.Color
+            'RGB Values
+            RGB_R_Common.Text = ColorDialog1.Color.R
+            RGB_G_Common.Text = ColorDialog1.Color.G
+            RGB_B_Common.Text = ColorDialog1.Color.B
+            'Hex Value
+            HexCommon.Text = String.Format("{0:X2}{1:X2}{2:X2}", ColorDialog1.Color.R, ColorDialog1.Color.G, ColorDialog1.Color.B)
+        End If
+    End Sub
+
+    'Color from Hex
+    Private Sub HexCommon_KeyPress(ByVal sender As Object, ByVal e As Windows.Forms.KeyPressEventArgs) Handles HexCommon.KeyPress
+        If Char.IsLower(e.KeyChar) Then
+            e.KeyChar = Char.ToUpper(e.KeyChar)
+            If InStr(1, "1234567890ABCDEF", e.KeyChar) = 0 Then
+                e.KeyChar = ""
+            End If
+        End If
+        If e.KeyChar = ChrW(Keys.Enter) Then
+            HexColor = HexCommon.Text
+            Red = Val("&H" & Mid(HexColor, 1, 2))
+            Green = Val("&H" & Mid(HexColor, 3, 2))
+            Blue = Val("&H" & Mid(HexColor, 5, 2))
+            RGB_R_Common.Text = Red
+            RGB_G_Common.Text = Green
+            RGB_B_Common.Text = Blue
+            ColorPickCommon.BackColor = Color.FromArgb(Red, Green, Blue)
+            ItemNameLabel2.ForeColor = Color.FromArgb(Red, Green, Blue)
+        End If
+    End Sub
+
+    'Uncommon rarity
+    Private Sub RGB_Uncommon_ValueChanged() Handles RGB_R_Uncommon.ValueChanged, RGB_G_Uncommon.ValueChanged, RGB_B_Uncommon.ValueChanged
+        Dim R As Integer = Integer.Parse(RGB_R_Uncommon.Text)
+        Dim G As Integer = Integer.Parse(RGB_G_Uncommon.Text)
+        Dim B As Integer = Integer.Parse(RGB_B_Uncommon.Text)
+        HexUncommon.Text = String.Format("{0}{1}{2}", R.ToString("X").PadLeft(2, "0"), G.ToString("X").PadLeft(2, "0"), B.ToString("X").PadLeft(2, "0"))
+        ColorPickUncommon.BackColor = Color.FromArgb(R, G, B)
+        ItemNameLabel2.ForeColor = Color.FromArgb(R, G, B)
+        Rarity2Label.ForeColor = Color.FromArgb(R, G, B)
+    End Sub
+
+    Private Sub ColorPickUncommon_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ColorPickUncommon.Click
+        If (ColorDialog1.ShowDialog() = Windows.Forms.DialogResult.OK) Then
+            ColorPickUncommon.BackColor = ColorDialog1.Color
+            ItemNameLabel2.ForeColor = ColorDialog1.Color
+            Rarity2Label.ForeColor = ColorDialog1.Color
+            RGB_R_Uncommon.Text = ColorDialog1.Color.R
+            RGB_G_Uncommon.Text = ColorDialog1.Color.G
+            RGB_B_Uncommon.Text = ColorDialog1.Color.B
+            HexUncommon.Text = String.Format("{0:X2}{1:X2}{2:X2}", ColorDialog1.Color.R, ColorDialog1.Color.G, ColorDialog1.Color.B)
+        End If
+    End Sub
+
+    Private Sub HexUncommon_KeyPress(ByVal sender As Object, ByVal e As Windows.Forms.KeyPressEventArgs) Handles HexUncommon.KeyPress
+        If Char.IsLower(e.KeyChar) Then
+            e.KeyChar = Char.ToUpper(e.KeyChar)
+            If InStr(1, "1234567890ABCDEF", e.KeyChar) = 0 Then
+                e.KeyChar = ""
+            End If
+        End If
+        If e.KeyChar = ChrW(Keys.Enter) Then
+            HexColor = HexUncommon.Text
+            Red = Val("&H" & Mid(HexColor, 1, 2))
+            Green = Val("&H" & Mid(HexColor, 3, 2))
+            Blue = Val("&H" & Mid(HexColor, 5, 2))
+            RGB_R_Uncommon.Text = Red
+            RGB_G_Uncommon.Text = Green
+            RGB_B_Uncommon.Text = Blue
+            ColorPickUncommon.BackColor = Color.FromArgb(Red, Green, Blue)
+            ItemNameLabel2.ForeColor = Color.FromArgb(Red, Green, Blue)
+        End If
+    End Sub
+
+    'Rare rarity
+    Private Sub RGB_Rare_ValueChanged() Handles RGB_R_Rare.ValueChanged, RGB_G_Rare.ValueChanged, RGB_B_Rare.ValueChanged
+        Dim R As Integer = Integer.Parse(RGB_R_Rare.Text)
+        Dim G As Integer = Integer.Parse(RGB_G_Rare.Text)
+        Dim B As Integer = Integer.Parse(RGB_B_Rare.Text)
+        HexRare.Text = String.Format("{0}{1}{2}", R.ToString("X").PadLeft(2, "0"), G.ToString("X").PadLeft(2, "0"), B.ToString("X").PadLeft(2, "0"))
+        ColorPickRare.BackColor = Color.FromArgb(R, G, B)
+        ItemNameLabel2.ForeColor = Color.FromArgb(R, G, B)
+        Rarity3Label.ForeColor = Color.FromArgb(R, G, B)
+    End Sub
+
+    Private Sub ColorPickRare_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ColorPickRare.Click
+        If (ColorDialog1.ShowDialog() = Windows.Forms.DialogResult.OK) Then
+            ColorPickRare.BackColor = ColorDialog1.Color
+            ItemNameLabel2.ForeColor = ColorDialog1.Color
+            Rarity3Label.ForeColor = ColorDialog1.Color
+            RGB_R_Rare.Text = ColorDialog1.Color.R
+            RGB_G_Rare.Text = ColorDialog1.Color.G
+            RGB_B_Rare.Text = ColorDialog1.Color.B
+            HexRare.Text = String.Format("{0:X2}{1:X2}{2:X2}", ColorDialog1.Color.R, ColorDialog1.Color.G, ColorDialog1.Color.B)
+        End If
+    End Sub
+
+    Private Sub HexRare_KeyPress(ByVal sender As Object, ByVal e As Windows.Forms.KeyPressEventArgs) Handles HexRare.KeyPress
+        If Char.IsLower(e.KeyChar) Then
+            e.KeyChar = Char.ToUpper(e.KeyChar)
+            If InStr(1, "1234567890ABCDEF", e.KeyChar) = 0 Then
+                e.KeyChar = ""
+            End If
+        End If
+        If e.KeyChar = ChrW(Keys.Enter) Then
+            HexColor = HexRare.Text
+            Red = Val("&H" & Mid(HexColor, 1, 2))
+            Green = Val("&H" & Mid(HexColor, 3, 2))
+            Blue = Val("&H" & Mid(HexColor, 5, 2))
+            RGB_R_Rare.Text = Red
+            RGB_G_Rare.Text = Green
+            RGB_B_Rare.Text = Blue
+            ColorPickRare.BackColor = Color.FromArgb(Red, Green, Blue)
+            ItemNameLabel2.ForeColor = Color.FromArgb(Red, Green, Blue)
+        End If
+    End Sub
+
+    'Mythical rarity
+    Private Sub RGB_Mythical_ValueChanged() Handles RGB_R_Mythical.ValueChanged, RGB_G_Mythical.ValueChanged, RGB_B_Mythical.ValueChanged
+        Dim R As Integer = Integer.Parse(RGB_R_Mythical.Text)
+        Dim G As Integer = Integer.Parse(RGB_G_Mythical.Text)
+        Dim B As Integer = Integer.Parse(RGB_B_Mythical.Text)
+        HexMythical.Text = String.Format("{0}{1}{2}", R.ToString("X").PadLeft(2, "0"), G.ToString("X").PadLeft(2, "0"), B.ToString("X").PadLeft(2, "0"))
+        ColorPickMythical.BackColor = Color.FromArgb(R, G, B)
+        ItemNameLabel2.ForeColor = Color.FromArgb(R, G, B)
+        Rarity4Label.ForeColor = Color.FromArgb(R, G, B)
+    End Sub
+
+    Private Sub ColorPickMythical_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ColorPickMythical.Click
+        If (ColorDialog1.ShowDialog() = Windows.Forms.DialogResult.OK) Then
+            ColorPickMythical.BackColor = ColorDialog1.Color
+            ItemNameLabel2.ForeColor = ColorDialog1.Color
+            Rarity4Label.ForeColor = ColorDialog1.Color
+            RGB_R_Mythical.Text = ColorDialog1.Color.R
+            RGB_G_Mythical.Text = ColorDialog1.Color.G
+            RGB_B_Mythical.Text = ColorDialog1.Color.B
+            HexMythical.Text = String.Format("{0:X2}{1:X2}{2:X2}", ColorDialog1.Color.R, ColorDialog1.Color.G, ColorDialog1.Color.B)
+        End If
+    End Sub
+
+    Private Sub HexMythical_KeyPress(ByVal sender As Object, ByVal e As Windows.Forms.KeyPressEventArgs) Handles HexMythical.KeyPress
+        If Char.IsLower(e.KeyChar) Then
+            e.KeyChar = Char.ToUpper(e.KeyChar)
+            If InStr(1, "1234567890ABCDEF", e.KeyChar) = 0 Then
+                e.KeyChar = ""
+            End If
+        End If
+        If e.KeyChar = ChrW(Keys.Enter) Then
+            HexColor = HexMythical.Text
+            Red = Val("&H" & Mid(HexColor, 1, 2))
+            Green = Val("&H" & Mid(HexColor, 3, 2))
+            Blue = Val("&H" & Mid(HexColor, 5, 2))
+            RGB_R_Mythical.Text = Red
+            RGB_G_Mythical.Text = Green
+            RGB_B_Mythical.Text = Blue
+            ColorPickMythical.BackColor = Color.FromArgb(Red, Green, Blue)
+            ItemNameLabel2.ForeColor = Color.FromArgb(Red, Green, Blue)
+        End If
+    End Sub
+
+    'Legendary rarity
+    Private Sub RGB_Legendary_ValueChanged() Handles RGB_R_Legendary.ValueChanged, RGB_G_Legendary.ValueChanged, RGB_B_Legendary.ValueChanged
+        Dim R As Integer = Integer.Parse(RGB_R_Legendary.Text)
+        Dim G As Integer = Integer.Parse(RGB_G_Legendary.Text)
+        Dim B As Integer = Integer.Parse(RGB_B_Legendary.Text)
+        HexLegendary.Text = String.Format("{0}{1}{2}", R.ToString("X").PadLeft(2, "0"), G.ToString("X").PadLeft(2, "0"), B.ToString("X").PadLeft(2, "0"))
+        ColorPickLegendary.BackColor = Color.FromArgb(R, G, B)
+        ItemNameLabel2.ForeColor = Color.FromArgb(R, G, B)
+        Rarity5Label.ForeColor = Color.FromArgb(R, G, B)
+    End Sub
+
+
+    Private Sub ColorPickLegendary_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ColorPickLegendary.Click
+        If (ColorDialog1.ShowDialog() = Windows.Forms.DialogResult.OK) Then
+            ColorPickLegendary.BackColor = ColorDialog1.Color
+            ItemNameLabel2.ForeColor = ColorDialog1.Color
+            Rarity5Label.ForeColor = ColorDialog1.Color
+            RGB_R_Legendary.Text = ColorDialog1.Color.R
+            RGB_G_Legendary.Text = ColorDialog1.Color.G
+            RGB_B_Legendary.Text = ColorDialog1.Color.B
+            HexLegendary.Text = String.Format("{0:X2}{1:X2}{2:X2}", ColorDialog1.Color.R, ColorDialog1.Color.G, ColorDialog1.Color.B)
+        End If
+    End Sub
+
+    Private Sub HexLegendary_KeyPress(ByVal sender As Object, ByVal e As Windows.Forms.KeyPressEventArgs) Handles HexLegendary.KeyPress
+        If Char.IsLower(e.KeyChar) Then
+            e.KeyChar = Char.ToUpper(e.KeyChar)
+            If InStr(1, "1234567890ABCDEF", e.KeyChar) = 0 Then
+                e.KeyChar = ""
+            End If
+        End If
+        If e.KeyChar = ChrW(Keys.Enter) Then
+            HexColor = HexLegendary.Text
+            Red = Val("&H" & Mid(HexColor, 1, 2))
+            Green = Val("&H" & Mid(HexColor, 3, 2))
+            Blue = Val("&H" & Mid(HexColor, 5, 2))
+            RGB_R_Legendary.Text = Red
+            RGB_G_Legendary.Text = Green
+            RGB_B_Legendary.Text = Blue
+            ColorPickLegendary.BackColor = Color.FromArgb(Red, Green, Blue)
+            ItemNameLabel2.ForeColor = Color.FromArgb(Red, Green, Blue)
+        End If
+    End Sub
+
+    'Ancient quality
+    Private Sub RGB_Ancient_ValueChanged() Handles RGB_R_Ancient.ValueChanged, RGB_G_Ancient.ValueChanged, RGB_B_Ancient.ValueChanged
+        Dim R As Integer = Integer.Parse(RGB_R_Ancient.Text)
+        Dim G As Integer = Integer.Parse(RGB_G_Ancient.Text)
+        Dim B As Integer = Integer.Parse(RGB_B_Ancient.Text)
+        HexAncient.Text = String.Format("{0}{1}{2}", R.ToString("X").PadLeft(2, "0"), G.ToString("X").PadLeft(2, "0"), B.ToString("X").PadLeft(2, "0"))
+        ColorPickAncient.BackColor = Color.FromArgb(R, G, B)
+        ItemNameLabel2.ForeColor = Color.FromArgb(R, G, B)
+        Rarity6Label.ForeColor = Color.FromArgb(R, G, B)
+    End Sub
+
+    Private Sub ColorPickAncient_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ColorPickAncient.Click
+        If (ColorDialog1.ShowDialog() = Windows.Forms.DialogResult.OK) Then
+            ColorPickAncient.BackColor = ColorDialog1.Color
+            ItemNameLabel2.ForeColor = ColorDialog1.Color
+            Rarity6Label.ForeColor = ColorDialog1.Color
+            RGB_R_Ancient.Text = ColorDialog1.Color.R
+            RGB_G_Ancient.Text = ColorDialog1.Color.G
+            RGB_B_Ancient.Text = ColorDialog1.Color.B
+            HexAncient.Text = String.Format("{0:X2}{1:X2}{2:X2}", ColorDialog1.Color.R, ColorDialog1.Color.G, ColorDialog1.Color.B)
+        End If
+    End Sub
+
+    Private Sub HexAncient_KeyPress(ByVal sender As Object, ByVal e As Windows.Forms.KeyPressEventArgs) Handles HexAncient.KeyPress
+        If Char.IsLower(e.KeyChar) Then
+            e.KeyChar = Char.ToUpper(e.KeyChar)
+            If InStr(1, "1234567890ABCDEF", e.KeyChar) = 0 Then
+                e.KeyChar = ""
+            End If
+        End If
+        If e.KeyChar = ChrW(Keys.Enter) Then
+            HexColor = HexAncient.Text
+            Red = Val("&H" & Mid(HexColor, 1, 2))
+            Green = Val("&H" & Mid(HexColor, 3, 2))
+            Blue = Val("&H" & Mid(HexColor, 5, 2))
+            RGB_R_Ancient.Text = Red
+            RGB_G_Ancient.Text = Green
+            RGB_B_Ancient.Text = Blue
+            ColorPickAncient.BackColor = Color.FromArgb(Red, Green, Blue)
+            ItemNameLabel2.ForeColor = Color.FromArgb(Red, Green, Blue)
+        End If
+    End Sub
+
     'Save file (Qualities)
     Private Sub SaveButton_Click() Handles SaveButton.Click, QualitiesToolStripMenuItem.Click
         If Not ResFile = Nothing Then
@@ -893,6 +1212,41 @@ Public Class MainMenu
         End If
     End Sub
 
+    'Save file (Rarities)
+    Private Sub SaveButton3_Click() Handles SaveButton.Click, RaritiesToolStripMenuItem.Click
+        If Not ResFile = Nothing Then
+            Dim lines = File.ReadAllLines(ResFile)
+            For x = 0 To lines.Count() - 1
+                If lines(x).Trim().StartsWith(Chr(34) & "ItemRarityCommon" & Chr(34)) Then
+                    lines(x) = "		" & Chr(34) & "ItemRarityCommon" & Chr(34) & "					" & Chr(34) & RGB_R_Common.Text & " " & RGB_G_Normal.Text & " " & RGB_B_Normal.Text & " 255" & Chr(34)
+                End If
+                If lines(x).Trim().StartsWith(Chr(34) & "ItemRarityUncommon" & Chr(34)) Then
+                    lines(x) = "		" & Chr(34) & "ItemRarityUncommon" & Chr(34) & "					" & Chr(34) & RGB_R_Uncommon.Text & " " & RGB_G_Uncommon.Text & " " & RGB_B_Uncommon.Text & " 255" & Chr(34)
+                End If
+                If lines(x).Trim().StartsWith(Chr(34) & "ItemRarityRare" & Chr(34)) Then
+                    lines(x) = "		" & Chr(34) & "ItemRarityRare" & Chr(34) & "					" & Chr(34) & RGB_R_Rare.Text & " " & RGB_G_Rare.Text & " " & RGB_B_Rare.Text & " 255" & Chr(34)
+                End If
+                If lines(x).Trim().StartsWith(Chr(34) & "ItemRarityMythical" & Chr(34)) Then
+                    lines(x) = "		" & Chr(34) & "ItemRarityMythical" & Chr(34) & "					" & Chr(34) & RGB_R_Mythical.Text & " " & RGB_G_Mythical.Text & " " & RGB_B_Mythical.Text & " 255" & Chr(34)
+                End If
+                If lines(x).Trim().StartsWith(Chr(34) & "ItemRarityLegendary" & Chr(34)) Then
+                    lines(x) = "		" & Chr(34) & "ItemRarityLegendary" & Chr(34) & "					" & Chr(34) & RGB_R_Legendary.Text & " " & RGB_G_Legendary.Text & " " & RGB_B_Legendary.Text & " 255" & Chr(34)
+                End If
+                If lines(x).Trim().StartsWith(Chr(34) & "ItemRarityAncient" & Chr(34)) Then
+                    lines(x) = "		" & Chr(34) & "ItemRarityAncient" & Chr(34) & "					" & Chr(34) & RGB_R_Ancient.Text & " " & RGB_G_Ancient.Text & " " & RGB_B_Ancient.Text & " 255" & Chr(34)
+                End If
+            Next
+            File.WriteAllLines(ResFile, lines)
+            Status.Text = "Qualities saved!"
+            Status.BackColor = Color.FromArgb(240, 240, 240)
+        Else
+            Status.Text = "Res file not found!"
+            Status.BackColor = Color.FromArgb(240, 200, 200)
+            My.Computer.Audio.PlaySystemSound( _
+                Media.SystemSounds.Hand)
+        End If
+    End Sub
+
     Private Sub DefaultColors() Handles DefaultToolStripMenuItem.Click
         'Qualities
         RGB_R_Normal.Text = "178"
@@ -950,9 +1304,28 @@ Public Class MainMenu
         RGB_R_Craft.Text = "117"
         RGB_G_Craft.Text = "107"
         RGB_B_Craft.Text = "94"
+        'Rartities
+        RGB_R_Common.Text = "176"
+        RGB_G_Common.Text = "195"
+        RGB_B_Common.Text = "217"
+        RGB_R_Uncommon.Text = "94"
+        RGB_G_Uncommon.Text = "152"
+        RGB_B_Uncommon.Text = "217"
+        RGB_R_Rare.Text = "75"
+        RGB_G_Rare.Text = "105"
+        RGB_B_Rare.Text = "255"
+        RGB_R_Mythical.Text = "136"
+        RGB_G_Mythical.Text = "71"
+        RGB_B_Mythical.Text = "255"
+        RGB_R_Legendary.Text = "211"
+        RGB_G_Legendary.Text = "44"
+        RGB_B_Legendary.Text = "230"
+        RGB_R_Ancient.Text = "235"
+        RGB_G_Ancient.Text = "75"
+        RGB_B_Ancient.Text = "75"
     End Sub
 
-    Private Sub RedPillColors() Handles RedPillsToolStripMenuItem.Click
+    Private Sub DioJoestarColors() Handles DioJoestarsToolStripMenuItem.Click
         RGB_R_Normal.Text = "178"
         RGB_G_Normal.Text = "178"
         RGB_B_Normal.Text = "178"
@@ -1008,6 +1381,25 @@ Public Class MainMenu
         RGB_R_Craft.Text = "192"
         RGB_G_Craft.Text = "192"
         RGB_B_Craft.Text = "192"
+        'Rartities
+        RGB_R_Common.Text = "234"
+        RGB_G_Common.Text = "235"
+        RGB_B_Common.Text = "218"
+        RGB_R_Uncommon.Text = "233"
+        RGB_G_Uncommon.Text = "235"
+        RGB_B_Uncommon.Text = "202"
+        RGB_R_Rare.Text = "231"
+        RGB_G_Rare.Text = "235"
+        RGB_B_Rare.Text = "172"
+        RGB_R_Mythical.Text = "229"
+        RGB_G_Mythical.Text = "235"
+        RGB_B_Mythical.Text = "134"
+        RGB_R_Legendary.Text = "226"
+        RGB_G_Legendary.Text = "235"
+        RGB_B_Legendary.Text = "75"
+        RGB_R_Ancient.Text = "245"
+        RGB_G_Ancient.Text = "199"
+        RGB_B_Ancient.Text = "16"
     End Sub
 
     'Vertical tabs
@@ -1029,13 +1421,25 @@ Public Class MainMenu
 
     Private Sub QualityTab_Enter() Handles QualityTab.Enter
         TypeLabel.Text = "Qualities"
-        SaveButton2.Hide()
+        Show_Panel1()
         SaveButton.Show()
+        SaveButton2.Hide()
+        SaveButton3.Hide()
     End Sub
 
     Private Sub AttributesTab_Enter() Handles AttributesTab.Enter
         TypeLabel.Text = "Attributtes"
+        Show_Panel1()
         SaveButton.Hide()
         SaveButton2.Show()
+        SaveButton3.Hide()
+    End Sub
+
+    Private Sub RarityTab_Enter() Handles RarityTab.Enter
+        TypeLabel.Text = "Rarity"
+        Hide_Panel1()
+        SaveButton.Hide()
+        SaveButton2.Hide()
+        SaveButton3.Show()
     End Sub
 End Class

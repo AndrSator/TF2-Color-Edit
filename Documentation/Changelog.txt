@@ -1,4 +1,7 @@
-﻿	Version 1.0.0.2
+﻿	Version 1.1.0.0
+- Added colors for rarities
+
+	Version 1.0.0.2
 - Added color for the label Limited
 	
 	Version 1.0.0.1

@@ -23,6 +23,27 @@ Partial Class MainMenu
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.ItemNameEdit_TextBox2 = New System.Windows.Forms.TextBox()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Rarity6Label = New System.Windows.Forms.Label()
+        Me.Rarity5Label = New System.Windows.Forms.Label()
+        Me.Rarity4Label = New System.Windows.Forms.Label()
+        Me.Rarity3Label = New System.Windows.Forms.Label()
+        Me.Rarity2Label = New System.Windows.Forms.Label()
+        Me.Rarity1Label = New System.Windows.Forms.Label()
+        Me.ItemNameLabel2 = New System.Windows.Forms.Label()
+        Me.SaveButton3 = New System.Windows.Forms.Button()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.CraftLabel = New System.Windows.Forms.Label()
+        Me.UseLabel = New System.Windows.Forms.Label()
+        Me.SetLabel = New System.Windows.Forms.Label()
+        Me.SetNLabel = New System.Windows.Forms.Label()
+        Me.NegativeLabel = New System.Windows.Forms.Label()
+        Me.NeutralLabel = New System.Windows.Forms.Label()
+        Me.PositiveLabel = New System.Windows.Forms.Label()
+        Me.LimitedLabel = New System.Windows.Forms.Label()
+        Me.LevelLabel = New System.Windows.Forms.Label()
+        Me.ItemNameLabel = New System.Windows.Forms.Label()
         Me.ItemNameEdit_TextBox = New System.Windows.Forms.TextBox()
         Me.Tab = New System.Windows.Forms.TabControl()
         Me.QualityTab = New System.Windows.Forms.TabPage()
@@ -135,6 +156,43 @@ Partial Class MainMenu
         Me.RGB_R_Neutral = New System.Windows.Forms.NumericUpDown()
         Me.HexUse = New System.Windows.Forms.TextBox()
         Me.RGB_R_Level = New System.Windows.Forms.NumericUpDown()
+        Me.RarityTab = New System.Windows.Forms.TabPage()
+        Me.HexCommon = New System.Windows.Forms.TextBox()
+        Me.RGB_B_Ancient = New System.Windows.Forms.NumericUpDown()
+        Me.ColorPickCommon = New System.Windows.Forms.Button()
+        Me.ColorPickLegendary = New System.Windows.Forms.Button()
+        Me.RGB_B_Mythical = New System.Windows.Forms.NumericUpDown()
+        Me.ColorPickUncommon = New System.Windows.Forms.Button()
+        Me.ColorPickAncient = New System.Windows.Forms.Button()
+        Me.RGB_B_Uncommon = New System.Windows.Forms.NumericUpDown()
+        Me.RGB_B_Legendary = New System.Windows.Forms.NumericUpDown()
+        Me.Label21 = New System.Windows.Forms.Label()
+        Me.RGB_B_Rare = New System.Windows.Forms.NumericUpDown()
+        Me.ColorPickRare = New System.Windows.Forms.Button()
+        Me.RGB_B_Common = New System.Windows.Forms.NumericUpDown()
+        Me.ColorPickMythical = New System.Windows.Forms.Button()
+        Me.RGB_G_Ancient = New System.Windows.Forms.NumericUpDown()
+        Me.Label22 = New System.Windows.Forms.Label()
+        Me.RGB_G_Mythical = New System.Windows.Forms.NumericUpDown()
+        Me.Label24 = New System.Windows.Forms.Label()
+        Me.Label25 = New System.Windows.Forms.Label()
+        Me.RGB_G_Uncommon = New System.Windows.Forms.NumericUpDown()
+        Me.RGB_R_Ancient = New System.Windows.Forms.NumericUpDown()
+        Me.Label26 = New System.Windows.Forms.Label()
+        Me.RGB_R_Mythical = New System.Windows.Forms.NumericUpDown()
+        Me.HexUncommon = New System.Windows.Forms.TextBox()
+        Me.RGB_R_Uncommon = New System.Windows.Forms.NumericUpDown()
+        Me.HexMythical = New System.Windows.Forms.TextBox()
+        Me.RGB_G_Legendary = New System.Windows.Forms.NumericUpDown()
+        Me.HexAncient = New System.Windows.Forms.TextBox()
+        Me.RGB_G_Rare = New System.Windows.Forms.NumericUpDown()
+        Me.RGB_G_Common = New System.Windows.Forms.NumericUpDown()
+        Me.HexLegendary = New System.Windows.Forms.TextBox()
+        Me.RGB_R_Legendary = New System.Windows.Forms.NumericUpDown()
+        Me.HexRare = New System.Windows.Forms.TextBox()
+        Me.RGB_R_Rare = New System.Windows.Forms.NumericUpDown()
+        Me.RGB_R_Common = New System.Windows.Forms.NumericUpDown()
+        Me.Label17 = New System.Windows.Forms.Label()
         Me.SaveButton2 = New System.Windows.Forms.Button()
         Me.SaveButton = New System.Windows.Forms.Button()
         Me.Label13 = New System.Windows.Forms.Label()
@@ -143,15 +201,6 @@ Partial Class MainMenu
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TypeLabel = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
-        Me.CraftLabel = New System.Windows.Forms.Label()
-        Me.UseLabel = New System.Windows.Forms.Label()
-        Me.SetLabel = New System.Windows.Forms.Label()
-        Me.SetNLabel = New System.Windows.Forms.Label()
-        Me.NegativeLabel = New System.Windows.Forms.Label()
-        Me.NeutralLabel = New System.Windows.Forms.Label()
-        Me.PositiveLabel = New System.Windows.Forms.Label()
-        Me.LevelLabel = New System.Windows.Forms.Label()
-        Me.ItemNameLabel = New System.Windows.Forms.Label()
         Me.ItemThumbnail = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
@@ -160,11 +209,12 @@ Partial Class MainMenu
         Me.SaveToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.QualitiesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AttributesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RaritiesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ColorsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DefaultToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.RedPillsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DioJoestarsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ColorDialog1 = New System.Windows.Forms.ColorDialog()
@@ -172,8 +222,9 @@ Partial Class MainMenu
         Me.FilePathTextBox = New System.Windows.Forms.TextBox()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.Status = New System.Windows.Forms.TextBox()
-        Me.LimitedLabel = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
+        Me.Panel2.SuspendLayout()
+        Me.Panel1.SuspendLayout()
         Me.Tab.SuspendLayout()
         Me.QualityTab.SuspendLayout()
         CType(Me.RGB_B_Community, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -231,6 +282,25 @@ Partial Class MainMenu
         CType(Me.RGB_R_SetN, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RGB_R_Neutral, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RGB_R_Level, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.RarityTab.SuspendLayout()
+        CType(Me.RGB_B_Ancient, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RGB_B_Mythical, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RGB_B_Uncommon, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RGB_B_Legendary, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RGB_B_Rare, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RGB_B_Common, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RGB_G_Ancient, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RGB_G_Mythical, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RGB_G_Uncommon, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RGB_R_Ancient, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RGB_R_Mythical, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RGB_R_Uncommon, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RGB_G_Legendary, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RGB_G_Rare, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RGB_G_Common, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RGB_R_Legendary, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RGB_R_Rare, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RGB_R_Common, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ItemThumbnail, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
@@ -238,6 +308,10 @@ Partial Class MainMenu
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.ItemNameEdit_TextBox2)
+        Me.GroupBox1.Controls.Add(Me.Panel2)
+        Me.GroupBox1.Controls.Add(Me.SaveButton3)
+        Me.GroupBox1.Controls.Add(Me.Panel1)
         Me.GroupBox1.Controls.Add(Me.ItemNameEdit_TextBox)
         Me.GroupBox1.Controls.Add(Me.Tab)
         Me.GroupBox1.Controls.Add(Me.SaveButton2)
@@ -248,16 +322,6 @@ Partial Class MainMenu
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.TypeLabel)
         Me.GroupBox1.Controls.Add(Me.Label12)
-        Me.GroupBox1.Controls.Add(Me.CraftLabel)
-        Me.GroupBox1.Controls.Add(Me.UseLabel)
-        Me.GroupBox1.Controls.Add(Me.SetLabel)
-        Me.GroupBox1.Controls.Add(Me.SetNLabel)
-        Me.GroupBox1.Controls.Add(Me.NegativeLabel)
-        Me.GroupBox1.Controls.Add(Me.NeutralLabel)
-        Me.GroupBox1.Controls.Add(Me.PositiveLabel)
-        Me.GroupBox1.Controls.Add(Me.LimitedLabel)
-        Me.GroupBox1.Controls.Add(Me.LevelLabel)
-        Me.GroupBox1.Controls.Add(Me.ItemNameLabel)
         Me.GroupBox1.Controls.Add(Me.ItemThumbnail)
         Me.GroupBox1.Controls.Add(Me.PictureBox1)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 53)
@@ -265,6 +329,244 @@ Partial Class MainMenu
         Me.GroupBox1.Size = New System.Drawing.Size(676, 331)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
+        '
+        'ItemNameEdit_TextBox2
+        '
+        Me.ItemNameEdit_TextBox2.Location = New System.Drawing.Point(346, 293)
+        Me.ItemNameEdit_TextBox2.MaxLength = 20
+        Me.ItemNameEdit_TextBox2.Name = "ItemNameEdit_TextBox2"
+        Me.ItemNameEdit_TextBox2.Size = New System.Drawing.Size(166, 20)
+        Me.ItemNameEdit_TextBox2.TabIndex = 15
+        Me.ItemNameEdit_TextBox2.Text = "Citizen Pain"
+        '
+        'Panel2
+        '
+        Me.Panel2.BackColor = System.Drawing.SystemColors.Control
+        Me.Panel2.Controls.Add(Me.Rarity6Label)
+        Me.Panel2.Controls.Add(Me.Rarity5Label)
+        Me.Panel2.Controls.Add(Me.Rarity4Label)
+        Me.Panel2.Controls.Add(Me.Rarity3Label)
+        Me.Panel2.Controls.Add(Me.Rarity2Label)
+        Me.Panel2.Controls.Add(Me.Rarity1Label)
+        Me.Panel2.Controls.Add(Me.ItemNameLabel2)
+        Me.Panel2.Location = New System.Drawing.Point(9, 141)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(328, 184)
+        Me.Panel2.TabIndex = 14
+        '
+        'Rarity6Label
+        '
+        Me.Rarity6Label.BackColor = System.Drawing.SystemColors.Control
+        Me.Rarity6Label.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Rarity6Label.Location = New System.Drawing.Point(4, 129)
+        Me.Rarity6Label.Name = "Rarity6Label"
+        Me.Rarity6Label.Size = New System.Drawing.Size(320, 16)
+        Me.Rarity6Label.TabIndex = 8
+        Me.Rarity6Label.Text = "Ancient"
+        Me.Rarity6Label.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
+        'Rarity5Label
+        '
+        Me.Rarity5Label.BackColor = System.Drawing.SystemColors.Control
+        Me.Rarity5Label.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Rarity5Label.Location = New System.Drawing.Point(4, 112)
+        Me.Rarity5Label.Name = "Rarity5Label"
+        Me.Rarity5Label.Size = New System.Drawing.Size(320, 16)
+        Me.Rarity5Label.TabIndex = 10
+        Me.Rarity5Label.Text = "Legendary"
+        Me.Rarity5Label.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
+        'Rarity4Label
+        '
+        Me.Rarity4Label.BackColor = System.Drawing.SystemColors.Control
+        Me.Rarity4Label.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Rarity4Label.Location = New System.Drawing.Point(4, 95)
+        Me.Rarity4Label.Name = "Rarity4Label"
+        Me.Rarity4Label.Size = New System.Drawing.Size(320, 16)
+        Me.Rarity4Label.TabIndex = 9
+        Me.Rarity4Label.Text = "Mythical"
+        Me.Rarity4Label.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
+        'Rarity3Label
+        '
+        Me.Rarity3Label.BackColor = System.Drawing.SystemColors.Control
+        Me.Rarity3Label.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Rarity3Label.Location = New System.Drawing.Point(4, 78)
+        Me.Rarity3Label.Name = "Rarity3Label"
+        Me.Rarity3Label.Size = New System.Drawing.Size(320, 16)
+        Me.Rarity3Label.TabIndex = 2
+        Me.Rarity3Label.Text = "Rare"
+        Me.Rarity3Label.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
+        'Rarity2Label
+        '
+        Me.Rarity2Label.BackColor = System.Drawing.SystemColors.Control
+        Me.Rarity2Label.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Rarity2Label.Location = New System.Drawing.Point(4, 61)
+        Me.Rarity2Label.Name = "Rarity2Label"
+        Me.Rarity2Label.Size = New System.Drawing.Size(320, 16)
+        Me.Rarity2Label.TabIndex = 1
+        Me.Rarity2Label.Text = "Uncommon"
+        Me.Rarity2Label.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
+        'Rarity1Label
+        '
+        Me.Rarity1Label.BackColor = System.Drawing.SystemColors.Control
+        Me.Rarity1Label.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Rarity1Label.Location = New System.Drawing.Point(4, 44)
+        Me.Rarity1Label.Name = "Rarity1Label"
+        Me.Rarity1Label.Size = New System.Drawing.Size(320, 16)
+        Me.Rarity1Label.TabIndex = 5
+        Me.Rarity1Label.Text = "Common"
+        Me.Rarity1Label.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
+        'ItemNameLabel2
+        '
+        Me.ItemNameLabel2.BackColor = System.Drawing.SystemColors.Control
+        Me.ItemNameLabel2.Font = New System.Drawing.Font("TF2 Build", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ItemNameLabel2.Location = New System.Drawing.Point(4, 5)
+        Me.ItemNameLabel2.Name = "ItemNameLabel2"
+        Me.ItemNameLabel2.Size = New System.Drawing.Size(320, 21)
+        Me.ItemNameLabel2.TabIndex = 4
+        Me.ItemNameLabel2.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
+        'SaveButton3
+        '
+        Me.SaveButton3.Enabled = False
+        Me.SaveButton3.Location = New System.Drawing.Point(518, 293)
+        Me.SaveButton3.Name = "SaveButton3"
+        Me.SaveButton3.Size = New System.Drawing.Size(128, 23)
+        Me.SaveButton3.TabIndex = 4
+        Me.SaveButton3.Text = "Save Rarities"
+        Me.SaveButton3.UseVisualStyleBackColor = True
+        Me.SaveButton3.Visible = False
+        '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.SystemColors.Control
+        Me.Panel1.Controls.Add(Me.CraftLabel)
+        Me.Panel1.Controls.Add(Me.UseLabel)
+        Me.Panel1.Controls.Add(Me.SetLabel)
+        Me.Panel1.Controls.Add(Me.SetNLabel)
+        Me.Panel1.Controls.Add(Me.NegativeLabel)
+        Me.Panel1.Controls.Add(Me.NeutralLabel)
+        Me.Panel1.Controls.Add(Me.PositiveLabel)
+        Me.Panel1.Controls.Add(Me.LimitedLabel)
+        Me.Panel1.Controls.Add(Me.LevelLabel)
+        Me.Panel1.Controls.Add(Me.ItemNameLabel)
+        Me.Panel1.Location = New System.Drawing.Point(9, 141)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(328, 184)
+        Me.Panel1.TabIndex = 13
+        '
+        'CraftLabel
+        '
+        Me.CraftLabel.BackColor = System.Drawing.SystemColors.Control
+        Me.CraftLabel.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CraftLabel.Location = New System.Drawing.Point(4, 163)
+        Me.CraftLabel.Name = "CraftLabel"
+        Me.CraftLabel.Size = New System.Drawing.Size(320, 16)
+        Me.CraftLabel.TabIndex = 7
+        Me.CraftLabel.Text = "( Not Tradable )"
+        Me.CraftLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
+        'UseLabel
+        '
+        Me.UseLabel.BackColor = System.Drawing.SystemColors.Control
+        Me.UseLabel.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.UseLabel.Location = New System.Drawing.Point(4, 146)
+        Me.UseLabel.Name = "UseLabel"
+        Me.UseLabel.Size = New System.Drawing.Size(320, 16)
+        Me.UseLabel.TabIndex = 6
+        Me.UseLabel.Text = "This is a limited use item"
+        Me.UseLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
+        'SetLabel
+        '
+        Me.SetLabel.BackColor = System.Drawing.SystemColors.Control
+        Me.SetLabel.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SetLabel.Location = New System.Drawing.Point(4, 129)
+        Me.SetLabel.Name = "SetLabel"
+        Me.SetLabel.Size = New System.Drawing.Size(320, 16)
+        Me.SetLabel.TabIndex = 8
+        Me.SetLabel.Text = "Set Equiped"
+        Me.SetLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
+        'SetNLabel
+        '
+        Me.SetNLabel.BackColor = System.Drawing.SystemColors.Control
+        Me.SetNLabel.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SetNLabel.Location = New System.Drawing.Point(4, 112)
+        Me.SetNLabel.Name = "SetNLabel"
+        Me.SetNLabel.Size = New System.Drawing.Size(320, 16)
+        Me.SetNLabel.TabIndex = 10
+        Me.SetNLabel.Text = "Set Name"
+        Me.SetNLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
+        'NegativeLabel
+        '
+        Me.NegativeLabel.BackColor = System.Drawing.SystemColors.Control
+        Me.NegativeLabel.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.NegativeLabel.Location = New System.Drawing.Point(4, 95)
+        Me.NegativeLabel.Name = "NegativeLabel"
+        Me.NegativeLabel.Size = New System.Drawing.Size(320, 16)
+        Me.NegativeLabel.TabIndex = 9
+        Me.NegativeLabel.Text = "Negative attribute"
+        Me.NegativeLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
+        'NeutralLabel
+        '
+        Me.NeutralLabel.BackColor = System.Drawing.SystemColors.Control
+        Me.NeutralLabel.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.NeutralLabel.Location = New System.Drawing.Point(4, 78)
+        Me.NeutralLabel.Name = "NeutralLabel"
+        Me.NeutralLabel.Size = New System.Drawing.Size(320, 16)
+        Me.NeutralLabel.TabIndex = 2
+        Me.NeutralLabel.Text = "Neutral attribute"
+        Me.NeutralLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
+        'PositiveLabel
+        '
+        Me.PositiveLabel.BackColor = System.Drawing.SystemColors.Control
+        Me.PositiveLabel.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PositiveLabel.Location = New System.Drawing.Point(4, 61)
+        Me.PositiveLabel.Name = "PositiveLabel"
+        Me.PositiveLabel.Size = New System.Drawing.Size(320, 16)
+        Me.PositiveLabel.TabIndex = 1
+        Me.PositiveLabel.Text = "Positive attribute"
+        Me.PositiveLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
+        'LimitedLabel
+        '
+        Me.LimitedLabel.BackColor = System.Drawing.SystemColors.Control
+        Me.LimitedLabel.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LimitedLabel.Location = New System.Drawing.Point(4, 27)
+        Me.LimitedLabel.Name = "LimitedLabel"
+        Me.LimitedLabel.Size = New System.Drawing.Size(320, 16)
+        Me.LimitedLabel.TabIndex = 3
+        Me.LimitedLabel.Text = "Limited Level 30 Hat"
+        Me.LimitedLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
+        'LevelLabel
+        '
+        Me.LevelLabel.BackColor = System.Drawing.SystemColors.Control
+        Me.LevelLabel.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LevelLabel.Location = New System.Drawing.Point(4, 44)
+        Me.LevelLabel.Name = "LevelLabel"
+        Me.LevelLabel.Size = New System.Drawing.Size(320, 16)
+        Me.LevelLabel.TabIndex = 5
+        Me.LevelLabel.Text = "Style: Old School"
+        Me.LevelLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
+        'ItemNameLabel
+        '
+        Me.ItemNameLabel.BackColor = System.Drawing.SystemColors.Control
+        Me.ItemNameLabel.Font = New System.Drawing.Font("TF2 Build", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ItemNameLabel.Location = New System.Drawing.Point(4, 5)
+        Me.ItemNameLabel.Name = "ItemNameLabel"
+        Me.ItemNameLabel.Size = New System.Drawing.Size(320, 21)
+        Me.ItemNameLabel.TabIndex = 4
+        Me.ItemNameLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'ItemNameEdit_TextBox
         '
@@ -280,6 +582,7 @@ Partial Class MainMenu
         Me.Tab.Alignment = System.Windows.Forms.TabAlignment.Right
         Me.Tab.Controls.Add(Me.QualityTab)
         Me.Tab.Controls.Add(Me.AttributesTab)
+        Me.Tab.Controls.Add(Me.RarityTab)
         Me.Tab.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed
         Me.Tab.Enabled = False
         Me.Tab.ItemSize = New System.Drawing.Size(20, 20)
@@ -1367,6 +1670,368 @@ Partial Class MainMenu
         Me.RGB_R_Level.Size = New System.Drawing.Size(38, 20)
         Me.RGB_R_Level.TabIndex = 37
         '
+        'RarityTab
+        '
+        Me.RarityTab.BackColor = System.Drawing.SystemColors.Control
+        Me.RarityTab.Controls.Add(Me.HexCommon)
+        Me.RarityTab.Controls.Add(Me.RGB_B_Ancient)
+        Me.RarityTab.Controls.Add(Me.ColorPickCommon)
+        Me.RarityTab.Controls.Add(Me.ColorPickLegendary)
+        Me.RarityTab.Controls.Add(Me.RGB_B_Mythical)
+        Me.RarityTab.Controls.Add(Me.ColorPickUncommon)
+        Me.RarityTab.Controls.Add(Me.ColorPickAncient)
+        Me.RarityTab.Controls.Add(Me.RGB_B_Uncommon)
+        Me.RarityTab.Controls.Add(Me.RGB_B_Legendary)
+        Me.RarityTab.Controls.Add(Me.Label21)
+        Me.RarityTab.Controls.Add(Me.RGB_B_Rare)
+        Me.RarityTab.Controls.Add(Me.ColorPickRare)
+        Me.RarityTab.Controls.Add(Me.RGB_B_Common)
+        Me.RarityTab.Controls.Add(Me.ColorPickMythical)
+        Me.RarityTab.Controls.Add(Me.RGB_G_Ancient)
+        Me.RarityTab.Controls.Add(Me.Label22)
+        Me.RarityTab.Controls.Add(Me.RGB_G_Mythical)
+        Me.RarityTab.Controls.Add(Me.Label24)
+        Me.RarityTab.Controls.Add(Me.Label25)
+        Me.RarityTab.Controls.Add(Me.RGB_G_Uncommon)
+        Me.RarityTab.Controls.Add(Me.RGB_R_Ancient)
+        Me.RarityTab.Controls.Add(Me.Label26)
+        Me.RarityTab.Controls.Add(Me.RGB_R_Mythical)
+        Me.RarityTab.Controls.Add(Me.HexUncommon)
+        Me.RarityTab.Controls.Add(Me.RGB_R_Uncommon)
+        Me.RarityTab.Controls.Add(Me.HexMythical)
+        Me.RarityTab.Controls.Add(Me.RGB_G_Legendary)
+        Me.RarityTab.Controls.Add(Me.HexAncient)
+        Me.RarityTab.Controls.Add(Me.RGB_G_Rare)
+        Me.RarityTab.Controls.Add(Me.RGB_G_Common)
+        Me.RarityTab.Controls.Add(Me.HexLegendary)
+        Me.RarityTab.Controls.Add(Me.RGB_R_Legendary)
+        Me.RarityTab.Controls.Add(Me.HexRare)
+        Me.RarityTab.Controls.Add(Me.RGB_R_Rare)
+        Me.RarityTab.Controls.Add(Me.RGB_R_Common)
+        Me.RarityTab.Controls.Add(Me.Label17)
+        Me.RarityTab.Location = New System.Drawing.Point(4, 4)
+        Me.RarityTab.Name = "RarityTab"
+        Me.RarityTab.Padding = New System.Windows.Forms.Padding(3)
+        Me.RarityTab.Size = New System.Drawing.Size(296, 239)
+        Me.RarityTab.TabIndex = 2
+        '
+        'HexCommon
+        '
+        Me.HexCommon.Location = New System.Drawing.Point(233, 6)
+        Me.HexCommon.MaxLength = 6
+        Me.HexCommon.Name = "HexCommon"
+        Me.HexCommon.Size = New System.Drawing.Size(54, 20)
+        Me.HexCommon.TabIndex = 40
+        '
+        'RGB_B_Ancient
+        '
+        Me.RGB_B_Ancient.Location = New System.Drawing.Point(160, 135)
+        Me.RGB_B_Ancient.Maximum = New Decimal(New Integer() {255, 0, 0, 0})
+        Me.RGB_B_Ancient.Name = "RGB_B_Ancient"
+        Me.RGB_B_Ancient.Size = New System.Drawing.Size(38, 20)
+        Me.RGB_B_Ancient.TabIndex = 59
+        '
+        'ColorPickCommon
+        '
+        Me.ColorPickCommon.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ColorPickCommon.Location = New System.Drawing.Point(204, 6)
+        Me.ColorPickCommon.Name = "ColorPickCommon"
+        Me.ColorPickCommon.Size = New System.Drawing.Size(23, 20)
+        Me.ColorPickCommon.TabIndex = 31
+        Me.ColorPickCommon.TabStop = False
+        Me.ColorPickCommon.UseVisualStyleBackColor = True
+        '
+        'ColorPickLegendary
+        '
+        Me.ColorPickLegendary.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ColorPickLegendary.Location = New System.Drawing.Point(204, 109)
+        Me.ColorPickLegendary.Name = "ColorPickLegendary"
+        Me.ColorPickLegendary.Size = New System.Drawing.Size(23, 20)
+        Me.ColorPickLegendary.TabIndex = 32
+        Me.ColorPickLegendary.TabStop = False
+        Me.ColorPickLegendary.UseVisualStyleBackColor = True
+        '
+        'RGB_B_Mythical
+        '
+        Me.RGB_B_Mythical.Location = New System.Drawing.Point(160, 83)
+        Me.RGB_B_Mythical.Maximum = New Decimal(New Integer() {255, 0, 0, 0})
+        Me.RGB_B_Mythical.Name = "RGB_B_Mythical"
+        Me.RGB_B_Mythical.Size = New System.Drawing.Size(38, 20)
+        Me.RGB_B_Mythical.TabIndex = 51
+        '
+        'ColorPickUncommon
+        '
+        Me.ColorPickUncommon.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ColorPickUncommon.Location = New System.Drawing.Point(204, 31)
+        Me.ColorPickUncommon.Name = "ColorPickUncommon"
+        Me.ColorPickUncommon.Size = New System.Drawing.Size(23, 20)
+        Me.ColorPickUncommon.TabIndex = 26
+        Me.ColorPickUncommon.TabStop = False
+        Me.ColorPickUncommon.UseVisualStyleBackColor = True
+        '
+        'ColorPickAncient
+        '
+        Me.ColorPickAncient.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ColorPickAncient.Location = New System.Drawing.Point(204, 135)
+        Me.ColorPickAncient.Name = "ColorPickAncient"
+        Me.ColorPickAncient.Size = New System.Drawing.Size(23, 20)
+        Me.ColorPickAncient.TabIndex = 27
+        Me.ColorPickAncient.TabStop = False
+        Me.ColorPickAncient.UseVisualStyleBackColor = True
+        '
+        'RGB_B_Uncommon
+        '
+        Me.RGB_B_Uncommon.Location = New System.Drawing.Point(160, 31)
+        Me.RGB_B_Uncommon.Maximum = New Decimal(New Integer() {255, 0, 0, 0})
+        Me.RGB_B_Uncommon.Name = "RGB_B_Uncommon"
+        Me.RGB_B_Uncommon.Size = New System.Drawing.Size(38, 20)
+        Me.RGB_B_Uncommon.TabIndex = 43
+        '
+        'RGB_B_Legendary
+        '
+        Me.RGB_B_Legendary.Location = New System.Drawing.Point(160, 109)
+        Me.RGB_B_Legendary.Maximum = New Decimal(New Integer() {255, 0, 0, 0})
+        Me.RGB_B_Legendary.Name = "RGB_B_Legendary"
+        Me.RGB_B_Legendary.Size = New System.Drawing.Size(38, 20)
+        Me.RGB_B_Legendary.TabIndex = 55
+        '
+        'Label21
+        '
+        Me.Label21.AutoSize = True
+        Me.Label21.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Label21.Location = New System.Drawing.Point(18, 112)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(48, 13)
+        Me.Label21.TabIndex = 35
+        Me.Label21.Text = "Assassin"
+        Me.Label21.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'RGB_B_Rare
+        '
+        Me.RGB_B_Rare.Location = New System.Drawing.Point(160, 57)
+        Me.RGB_B_Rare.Maximum = New Decimal(New Integer() {255, 0, 0, 0})
+        Me.RGB_B_Rare.Name = "RGB_B_Rare"
+        Me.RGB_B_Rare.Size = New System.Drawing.Size(38, 20)
+        Me.RGB_B_Rare.TabIndex = 47
+        '
+        'ColorPickRare
+        '
+        Me.ColorPickRare.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ColorPickRare.Location = New System.Drawing.Point(204, 57)
+        Me.ColorPickRare.Name = "ColorPickRare"
+        Me.ColorPickRare.Size = New System.Drawing.Size(23, 20)
+        Me.ColorPickRare.TabIndex = 29
+        Me.ColorPickRare.TabStop = False
+        Me.ColorPickRare.UseVisualStyleBackColor = True
+        '
+        'RGB_B_Common
+        '
+        Me.RGB_B_Common.Location = New System.Drawing.Point(160, 6)
+        Me.RGB_B_Common.Maximum = New Decimal(New Integer() {255, 0, 0, 0})
+        Me.RGB_B_Common.Name = "RGB_B_Common"
+        Me.RGB_B_Common.Size = New System.Drawing.Size(38, 20)
+        Me.RGB_B_Common.TabIndex = 34
+        '
+        'ColorPickMythical
+        '
+        Me.ColorPickMythical.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ColorPickMythical.Location = New System.Drawing.Point(204, 83)
+        Me.ColorPickMythical.Name = "ColorPickMythical"
+        Me.ColorPickMythical.Size = New System.Drawing.Size(23, 20)
+        Me.ColorPickMythical.TabIndex = 28
+        Me.ColorPickMythical.TabStop = False
+        Me.ColorPickMythical.UseVisualStyleBackColor = True
+        '
+        'RGB_G_Ancient
+        '
+        Me.RGB_G_Ancient.Location = New System.Drawing.Point(116, 135)
+        Me.RGB_G_Ancient.Maximum = New Decimal(New Integer() {255, 0, 0, 0})
+        Me.RGB_G_Ancient.Name = "RGB_G_Ancient"
+        Me.RGB_G_Ancient.Size = New System.Drawing.Size(38, 20)
+        Me.RGB_G_Ancient.TabIndex = 58
+        '
+        'Label22
+        '
+        Me.Label22.AutoSize = True
+        Me.Label22.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Label22.Location = New System.Drawing.Point(12, 33)
+        Me.Label22.Name = "Label22"
+        Me.Label22.Size = New System.Drawing.Size(54, 13)
+        Me.Label22.TabIndex = 33
+        Me.Label22.Text = "Freelance"
+        Me.Label22.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'RGB_G_Mythical
+        '
+        Me.RGB_G_Mythical.Location = New System.Drawing.Point(116, 83)
+        Me.RGB_G_Mythical.Maximum = New Decimal(New Integer() {255, 0, 0, 0})
+        Me.RGB_G_Mythical.Name = "RGB_G_Mythical"
+        Me.RGB_G_Mythical.Size = New System.Drawing.Size(38, 20)
+        Me.RGB_G_Mythical.TabIndex = 50
+        '
+        'Label24
+        '
+        Me.Label24.AutoSize = True
+        Me.Label24.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Label24.Location = New System.Drawing.Point(35, 138)
+        Me.Label24.Name = "Label24"
+        Me.Label24.Size = New System.Drawing.Size(27, 13)
+        Me.Label24.TabIndex = 39
+        Me.Label24.Text = "Elite"
+        Me.Label24.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'Label25
+        '
+        Me.Label25.AutoSize = True
+        Me.Label25.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Label25.Location = New System.Drawing.Point(9, 59)
+        Me.Label25.Name = "Label25"
+        Me.Label25.Size = New System.Drawing.Size(57, 13)
+        Me.Label25.TabIndex = 37
+        Me.Label25.Text = "Mercenary"
+        Me.Label25.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'RGB_G_Uncommon
+        '
+        Me.RGB_G_Uncommon.Location = New System.Drawing.Point(116, 31)
+        Me.RGB_G_Uncommon.Maximum = New Decimal(New Integer() {255, 0, 0, 0})
+        Me.RGB_G_Uncommon.Name = "RGB_G_Uncommon"
+        Me.RGB_G_Uncommon.Size = New System.Drawing.Size(38, 20)
+        Me.RGB_G_Uncommon.TabIndex = 42
+        '
+        'RGB_R_Ancient
+        '
+        Me.RGB_R_Ancient.Location = New System.Drawing.Point(72, 135)
+        Me.RGB_R_Ancient.Maximum = New Decimal(New Integer() {255, 0, 0, 0})
+        Me.RGB_R_Ancient.Name = "RGB_R_Ancient"
+        Me.RGB_R_Ancient.Size = New System.Drawing.Size(38, 20)
+        Me.RGB_R_Ancient.TabIndex = 57
+        '
+        'Label26
+        '
+        Me.Label26.AutoSize = True
+        Me.Label26.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Label26.Location = New System.Drawing.Point(6, 86)
+        Me.Label26.Name = "Label26"
+        Me.Label26.Size = New System.Drawing.Size(60, 13)
+        Me.Label26.TabIndex = 36
+        Me.Label26.Text = "Commando"
+        Me.Label26.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'RGB_R_Mythical
+        '
+        Me.RGB_R_Mythical.Location = New System.Drawing.Point(72, 83)
+        Me.RGB_R_Mythical.Maximum = New Decimal(New Integer() {255, 0, 0, 0})
+        Me.RGB_R_Mythical.Name = "RGB_R_Mythical"
+        Me.RGB_R_Mythical.Size = New System.Drawing.Size(38, 20)
+        Me.RGB_R_Mythical.TabIndex = 49
+        '
+        'HexUncommon
+        '
+        Me.HexUncommon.Location = New System.Drawing.Point(233, 31)
+        Me.HexUncommon.MaxLength = 6
+        Me.HexUncommon.Name = "HexUncommon"
+        Me.HexUncommon.Size = New System.Drawing.Size(54, 20)
+        Me.HexUncommon.TabIndex = 44
+        '
+        'RGB_R_Uncommon
+        '
+        Me.RGB_R_Uncommon.Location = New System.Drawing.Point(72, 31)
+        Me.RGB_R_Uncommon.Maximum = New Decimal(New Integer() {255, 0, 0, 0})
+        Me.RGB_R_Uncommon.Name = "RGB_R_Uncommon"
+        Me.RGB_R_Uncommon.Size = New System.Drawing.Size(38, 20)
+        Me.RGB_R_Uncommon.TabIndex = 41
+        '
+        'HexMythical
+        '
+        Me.HexMythical.Location = New System.Drawing.Point(233, 83)
+        Me.HexMythical.MaxLength = 6
+        Me.HexMythical.Name = "HexMythical"
+        Me.HexMythical.Size = New System.Drawing.Size(54, 20)
+        Me.HexMythical.TabIndex = 52
+        '
+        'RGB_G_Legendary
+        '
+        Me.RGB_G_Legendary.Location = New System.Drawing.Point(116, 109)
+        Me.RGB_G_Legendary.Maximum = New Decimal(New Integer() {255, 0, 0, 0})
+        Me.RGB_G_Legendary.Name = "RGB_G_Legendary"
+        Me.RGB_G_Legendary.Size = New System.Drawing.Size(38, 20)
+        Me.RGB_G_Legendary.TabIndex = 54
+        '
+        'HexAncient
+        '
+        Me.HexAncient.Location = New System.Drawing.Point(233, 135)
+        Me.HexAncient.MaxLength = 6
+        Me.HexAncient.Name = "HexAncient"
+        Me.HexAncient.Size = New System.Drawing.Size(54, 20)
+        Me.HexAncient.TabIndex = 60
+        '
+        'RGB_G_Rare
+        '
+        Me.RGB_G_Rare.Location = New System.Drawing.Point(116, 57)
+        Me.RGB_G_Rare.Maximum = New Decimal(New Integer() {255, 0, 0, 0})
+        Me.RGB_G_Rare.Name = "RGB_G_Rare"
+        Me.RGB_G_Rare.Size = New System.Drawing.Size(38, 20)
+        Me.RGB_G_Rare.TabIndex = 46
+        '
+        'RGB_G_Common
+        '
+        Me.RGB_G_Common.Location = New System.Drawing.Point(116, 6)
+        Me.RGB_G_Common.Maximum = New Decimal(New Integer() {255, 0, 0, 0})
+        Me.RGB_G_Common.Name = "RGB_G_Common"
+        Me.RGB_G_Common.Size = New System.Drawing.Size(38, 20)
+        Me.RGB_G_Common.TabIndex = 30
+        '
+        'HexLegendary
+        '
+        Me.HexLegendary.Location = New System.Drawing.Point(233, 109)
+        Me.HexLegendary.MaxLength = 6
+        Me.HexLegendary.Name = "HexLegendary"
+        Me.HexLegendary.Size = New System.Drawing.Size(54, 20)
+        Me.HexLegendary.TabIndex = 56
+        '
+        'RGB_R_Legendary
+        '
+        Me.RGB_R_Legendary.Location = New System.Drawing.Point(72, 109)
+        Me.RGB_R_Legendary.Maximum = New Decimal(New Integer() {255, 0, 0, 0})
+        Me.RGB_R_Legendary.Name = "RGB_R_Legendary"
+        Me.RGB_R_Legendary.Size = New System.Drawing.Size(38, 20)
+        Me.RGB_R_Legendary.TabIndex = 53
+        '
+        'HexRare
+        '
+        Me.HexRare.Location = New System.Drawing.Point(233, 57)
+        Me.HexRare.MaxLength = 6
+        Me.HexRare.Name = "HexRare"
+        Me.HexRare.Size = New System.Drawing.Size(54, 20)
+        Me.HexRare.TabIndex = 48
+        '
+        'RGB_R_Rare
+        '
+        Me.RGB_R_Rare.Location = New System.Drawing.Point(72, 57)
+        Me.RGB_R_Rare.Maximum = New Decimal(New Integer() {255, 0, 0, 0})
+        Me.RGB_R_Rare.Name = "RGB_R_Rare"
+        Me.RGB_R_Rare.Size = New System.Drawing.Size(38, 20)
+        Me.RGB_R_Rare.TabIndex = 45
+        '
+        'RGB_R_Common
+        '
+        Me.RGB_R_Common.Location = New System.Drawing.Point(72, 6)
+        Me.RGB_R_Common.Maximum = New Decimal(New Integer() {255, 0, 0, 0})
+        Me.RGB_R_Common.Name = "RGB_R_Common"
+        Me.RGB_R_Common.Size = New System.Drawing.Size(38, 20)
+        Me.RGB_R_Common.TabIndex = 25
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.Location = New System.Drawing.Point(26, 9)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(40, 13)
+        Me.Label17.TabIndex = 4
+        Me.Label17.Text = "Civilian"
+        Me.Label17.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
         'SaveButton2
         '
         Me.SaveButton2.Enabled = False
@@ -1432,7 +2097,7 @@ Partial Class MainMenu
         '
         Me.TypeLabel.AutoSize = True
         Me.TypeLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TypeLabel.Location = New System.Drawing.Point(361, 24)
+        Me.TypeLabel.Location = New System.Drawing.Point(356, 24)
         Me.TypeLabel.Name = "TypeLabel"
         Me.TypeLabel.Size = New System.Drawing.Size(56, 13)
         Me.TypeLabel.TabIndex = 12
@@ -1447,104 +2112,6 @@ Partial Class MainMenu
         Me.Label12.Size = New System.Drawing.Size(29, 13)
         Me.Label12.TabIndex = 12
         Me.Label12.Text = "Hex"
-        '
-        'CraftLabel
-        '
-        Me.CraftLabel.BackColor = System.Drawing.SystemColors.Control
-        Me.CraftLabel.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CraftLabel.Location = New System.Drawing.Point(13, 299)
-        Me.CraftLabel.Name = "CraftLabel"
-        Me.CraftLabel.Size = New System.Drawing.Size(320, 16)
-        Me.CraftLabel.TabIndex = 0
-        Me.CraftLabel.Text = "( Not Tradable )"
-        Me.CraftLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter
-        '
-        'UseLabel
-        '
-        Me.UseLabel.BackColor = System.Drawing.SystemColors.Control
-        Me.UseLabel.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.UseLabel.Location = New System.Drawing.Point(13, 282)
-        Me.UseLabel.Name = "UseLabel"
-        Me.UseLabel.Size = New System.Drawing.Size(320, 16)
-        Me.UseLabel.TabIndex = 0
-        Me.UseLabel.Text = "This is a limited use item"
-        Me.UseLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter
-        '
-        'SetLabel
-        '
-        Me.SetLabel.BackColor = System.Drawing.SystemColors.Control
-        Me.SetLabel.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.SetLabel.Location = New System.Drawing.Point(13, 265)
-        Me.SetLabel.Name = "SetLabel"
-        Me.SetLabel.Size = New System.Drawing.Size(320, 16)
-        Me.SetLabel.TabIndex = 0
-        Me.SetLabel.Text = "Set Equiped"
-        Me.SetLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter
-        '
-        'SetNLabel
-        '
-        Me.SetNLabel.BackColor = System.Drawing.SystemColors.Control
-        Me.SetNLabel.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.SetNLabel.Location = New System.Drawing.Point(13, 248)
-        Me.SetNLabel.Name = "SetNLabel"
-        Me.SetNLabel.Size = New System.Drawing.Size(320, 16)
-        Me.SetNLabel.TabIndex = 0
-        Me.SetNLabel.Text = "Set Name"
-        Me.SetNLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter
-        '
-        'NegativeLabel
-        '
-        Me.NegativeLabel.BackColor = System.Drawing.SystemColors.Control
-        Me.NegativeLabel.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.NegativeLabel.Location = New System.Drawing.Point(13, 231)
-        Me.NegativeLabel.Name = "NegativeLabel"
-        Me.NegativeLabel.Size = New System.Drawing.Size(320, 16)
-        Me.NegativeLabel.TabIndex = 0
-        Me.NegativeLabel.Text = "Negative attribute"
-        Me.NegativeLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter
-        '
-        'NeutralLabel
-        '
-        Me.NeutralLabel.BackColor = System.Drawing.SystemColors.Control
-        Me.NeutralLabel.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.NeutralLabel.Location = New System.Drawing.Point(13, 214)
-        Me.NeutralLabel.Name = "NeutralLabel"
-        Me.NeutralLabel.Size = New System.Drawing.Size(320, 16)
-        Me.NeutralLabel.TabIndex = 0
-        Me.NeutralLabel.Text = "Neutral attribute"
-        Me.NeutralLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter
-        '
-        'PositiveLabel
-        '
-        Me.PositiveLabel.BackColor = System.Drawing.SystemColors.Control
-        Me.PositiveLabel.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.PositiveLabel.Location = New System.Drawing.Point(13, 197)
-        Me.PositiveLabel.Name = "PositiveLabel"
-        Me.PositiveLabel.Size = New System.Drawing.Size(320, 16)
-        Me.PositiveLabel.TabIndex = 0
-        Me.PositiveLabel.Text = "Positive attribute"
-        Me.PositiveLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter
-        '
-        'LevelLabel
-        '
-        Me.LevelLabel.BackColor = System.Drawing.SystemColors.Control
-        Me.LevelLabel.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LevelLabel.Location = New System.Drawing.Point(13, 180)
-        Me.LevelLabel.Name = "LevelLabel"
-        Me.LevelLabel.Size = New System.Drawing.Size(320, 16)
-        Me.LevelLabel.TabIndex = 0
-        Me.LevelLabel.Text = "Style: Old School"
-        Me.LevelLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter
-        '
-        'ItemNameLabel
-        '
-        Me.ItemNameLabel.BackColor = System.Drawing.SystemColors.Control
-        Me.ItemNameLabel.Font = New System.Drawing.Font("TF2 Build", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ItemNameLabel.Location = New System.Drawing.Point(13, 141)
-        Me.ItemNameLabel.Name = "ItemNameLabel"
-        Me.ItemNameLabel.Size = New System.Drawing.Size(320, 21)
-        Me.ItemNameLabel.TabIndex = 0
-        Me.ItemNameLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'ItemThumbnail
         '
@@ -1586,42 +2153,48 @@ Partial Class MainMenu
         'OpenToolStripMenuItem
         '
         Me.OpenToolStripMenuItem.Name = "OpenToolStripMenuItem"
-        Me.OpenToolStripMenuItem.Size = New System.Drawing.Size(100, 22)
+        Me.OpenToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.OpenToolStripMenuItem.Text = "Load"
         '
         'SaveToolStripMenuItem
         '
-        Me.SaveToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.QualitiesToolStripMenuItem, Me.AttributesToolStripMenuItem})
+        Me.SaveToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.QualitiesToolStripMenuItem, Me.AttributesToolStripMenuItem, Me.RaritiesToolStripMenuItem})
         Me.SaveToolStripMenuItem.Name = "SaveToolStripMenuItem"
-        Me.SaveToolStripMenuItem.Size = New System.Drawing.Size(100, 22)
+        Me.SaveToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.SaveToolStripMenuItem.Text = "Save"
         '
         'QualitiesToolStripMenuItem
         '
         Me.QualitiesToolStripMenuItem.Name = "QualitiesToolStripMenuItem"
-        Me.QualitiesToolStripMenuItem.Size = New System.Drawing.Size(126, 22)
+        Me.QualitiesToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.QualitiesToolStripMenuItem.Text = "Qualities"
         '
         'AttributesToolStripMenuItem
         '
         Me.AttributesToolStripMenuItem.Name = "AttributesToolStripMenuItem"
-        Me.AttributesToolStripMenuItem.Size = New System.Drawing.Size(126, 22)
+        Me.AttributesToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.AttributesToolStripMenuItem.Text = "Attributes"
+        '
+        'RaritiesToolStripMenuItem
+        '
+        Me.RaritiesToolStripMenuItem.Name = "RaritiesToolStripMenuItem"
+        Me.RaritiesToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.RaritiesToolStripMenuItem.Text = "Rarities"
         '
         'ToolStripSeparator1
         '
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(97, 6)
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(149, 6)
         '
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(100, 22)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.ExitToolStripMenuItem.Text = "Exit"
         '
         'ColorsToolStripMenuItem
         '
-        Me.ColorsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DefaultToolStripMenuItem, Me.RedPillsToolStripMenuItem})
+        Me.ColorsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DefaultToolStripMenuItem, Me.DioJoestarsToolStripMenuItem})
         Me.ColorsToolStripMenuItem.Name = "ColorsToolStripMenuItem"
         Me.ColorsToolStripMenuItem.Size = New System.Drawing.Size(88, 20)
         Me.ColorsToolStripMenuItem.Text = "Color Presets"
@@ -1629,14 +2202,14 @@ Partial Class MainMenu
         'DefaultToolStripMenuItem
         '
         Me.DefaultToolStripMenuItem.Name = "DefaultToolStripMenuItem"
-        Me.DefaultToolStripMenuItem.Size = New System.Drawing.Size(118, 22)
+        Me.DefaultToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.DefaultToolStripMenuItem.Text = "Default"
         '
-        'RedPillsToolStripMenuItem
+        'DioJoestarsToolStripMenuItem
         '
-        Me.RedPillsToolStripMenuItem.Name = "RedPillsToolStripMenuItem"
-        Me.RedPillsToolStripMenuItem.Size = New System.Drawing.Size(118, 22)
-        Me.RedPillsToolStripMenuItem.Text = "RedPill's"
+        Me.DioJoestarsToolStripMenuItem.Name = "DioJoestarsToolStripMenuItem"
+        Me.DioJoestarsToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.DioJoestarsToolStripMenuItem.Text = "DioJoestar's"
         '
         'HelpToolStripMenuItem
         '
@@ -1683,17 +2256,6 @@ Partial Class MainMenu
         Me.Status.Size = New System.Drawing.Size(676, 20)
         Me.Status.TabIndex = 3
         '
-        'LimitedLabel
-        '
-        Me.LimitedLabel.BackColor = System.Drawing.SystemColors.Control
-        Me.LimitedLabel.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LimitedLabel.Location = New System.Drawing.Point(13, 163)
-        Me.LimitedLabel.Name = "LimitedLabel"
-        Me.LimitedLabel.Size = New System.Drawing.Size(320, 16)
-        Me.LimitedLabel.TabIndex = 0
-        Me.LimitedLabel.Text = "Limited Level 30 Hat"
-        Me.LimitedLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter
-        '
         'MainMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1711,6 +2273,8 @@ Partial Class MainMenu
         Me.Text = "TF2 Color Edit"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        Me.Panel2.ResumeLayout(False)
+        Me.Panel1.ResumeLayout(False)
         Me.Tab.ResumeLayout(False)
         Me.QualityTab.ResumeLayout(False)
         Me.QualityTab.PerformLayout()
@@ -1770,6 +2334,26 @@ Partial Class MainMenu
         CType(Me.RGB_R_SetN, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RGB_R_Neutral, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RGB_R_Level, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.RarityTab.ResumeLayout(False)
+        Me.RarityTab.PerformLayout()
+        CType(Me.RGB_B_Ancient, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RGB_B_Mythical, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RGB_B_Uncommon, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RGB_B_Legendary, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RGB_B_Rare, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RGB_B_Common, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RGB_G_Ancient, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RGB_G_Mythical, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RGB_G_Uncommon, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RGB_R_Ancient, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RGB_R_Mythical, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RGB_R_Uncommon, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RGB_G_Legendary, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RGB_G_Rare, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RGB_G_Common, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RGB_R_Legendary, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RGB_R_Rare, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RGB_R_Common, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ItemThumbnail, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.MenuStrip1.ResumeLayout(False)
@@ -1801,7 +2385,6 @@ Partial Class MainMenu
     Friend WithEvents ColorPickStrange As System.Windows.Forms.Button
     Friend WithEvents ColorPickNormal As System.Windows.Forms.Button
     Friend WithEvents ColorDialog1 As System.Windows.Forms.ColorDialog
-    Friend WithEvents ItemNameLabel As System.Windows.Forms.Label
     Friend WithEvents FileOpenButton As System.Windows.Forms.Button
     Friend WithEvents FilePathTextBox As System.Windows.Forms.TextBox
     Friend WithEvents HexUnique As System.Windows.Forms.TextBox
@@ -1853,7 +2436,7 @@ Partial Class MainMenu
     Friend WithEvents RGB_R_Collector As System.Windows.Forms.NumericUpDown
     Friend WithEvents RGB_R_Strange As System.Windows.Forms.NumericUpDown
     Friend WithEvents RGB_R_Vintage As System.Windows.Forms.NumericUpDown
-    Friend WithEvents RedPillsToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents DioJoestarsToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents ItemNameEdit_TextBox As System.Windows.Forms.TextBox
     Friend WithEvents Tab As System.Windows.Forms.TabControl
@@ -1908,14 +2491,6 @@ Partial Class MainMenu
     Friend WithEvents RGB_R_Neutral As System.Windows.Forms.NumericUpDown
     Friend WithEvents HexUse As System.Windows.Forms.TextBox
     Friend WithEvents RGB_R_Level As System.Windows.Forms.NumericUpDown
-    Friend WithEvents LevelLabel As System.Windows.Forms.Label
-    Friend WithEvents NegativeLabel As System.Windows.Forms.Label
-    Friend WithEvents NeutralLabel As System.Windows.Forms.Label
-    Friend WithEvents PositiveLabel As System.Windows.Forms.Label
-    Friend WithEvents SetNLabel As System.Windows.Forms.Label
-    Friend WithEvents SetLabel As System.Windows.Forms.Label
-    Friend WithEvents CraftLabel As System.Windows.Forms.Label
-    Friend WithEvents UseLabel As System.Windows.Forms.Label
     Friend WithEvents SaveButton2 As System.Windows.Forms.Button
     Friend WithEvents QualitiesToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents AttributesToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
@@ -1928,6 +2503,64 @@ Partial Class MainMenu
     Friend WithEvents RGB_G_Limited As System.Windows.Forms.NumericUpDown
     Friend WithEvents HexLimited As System.Windows.Forms.TextBox
     Friend WithEvents RGB_R_Limited As System.Windows.Forms.NumericUpDown
+    Friend WithEvents RarityTab As System.Windows.Forms.TabPage
+    Friend WithEvents Panel1 As System.Windows.Forms.Panel
+    Friend WithEvents CraftLabel As System.Windows.Forms.Label
+    Friend WithEvents UseLabel As System.Windows.Forms.Label
+    Friend WithEvents SetLabel As System.Windows.Forms.Label
+    Friend WithEvents SetNLabel As System.Windows.Forms.Label
+    Friend WithEvents NegativeLabel As System.Windows.Forms.Label
+    Friend WithEvents NeutralLabel As System.Windows.Forms.Label
+    Friend WithEvents PositiveLabel As System.Windows.Forms.Label
     Friend WithEvents LimitedLabel As System.Windows.Forms.Label
+    Friend WithEvents LevelLabel As System.Windows.Forms.Label
+    Friend WithEvents ItemNameLabel As System.Windows.Forms.Label
+    Friend WithEvents SaveButton3 As System.Windows.Forms.Button
+    Friend WithEvents Panel2 As System.Windows.Forms.Panel
+    Friend WithEvents Rarity5Label As System.Windows.Forms.Label
+    Friend WithEvents Rarity4Label As System.Windows.Forms.Label
+    Friend WithEvents Rarity3Label As System.Windows.Forms.Label
+    Friend WithEvents Rarity2Label As System.Windows.Forms.Label
+    Friend WithEvents Rarity1Label As System.Windows.Forms.Label
+    Friend WithEvents ItemNameLabel2 As System.Windows.Forms.Label
+    Friend WithEvents Rarity6Label As System.Windows.Forms.Label
+    Friend WithEvents ItemNameEdit_TextBox2 As System.Windows.Forms.TextBox
+    Friend WithEvents HexCommon As System.Windows.Forms.TextBox
+    Friend WithEvents RGB_B_Ancient As System.Windows.Forms.NumericUpDown
+    Friend WithEvents ColorPickCommon As System.Windows.Forms.Button
+    Friend WithEvents ColorPickLegendary As System.Windows.Forms.Button
+    Friend WithEvents RGB_B_Mythical As System.Windows.Forms.NumericUpDown
+    Friend WithEvents ColorPickUncommon As System.Windows.Forms.Button
+    Friend WithEvents ColorPickAncient As System.Windows.Forms.Button
+    Friend WithEvents RGB_B_Uncommon As System.Windows.Forms.NumericUpDown
+    Friend WithEvents RGB_B_Legendary As System.Windows.Forms.NumericUpDown
+    Friend WithEvents Label21 As System.Windows.Forms.Label
+    Friend WithEvents RGB_B_Rare As System.Windows.Forms.NumericUpDown
+    Friend WithEvents ColorPickRare As System.Windows.Forms.Button
+    Friend WithEvents RGB_B_Common As System.Windows.Forms.NumericUpDown
+    Friend WithEvents ColorPickMythical As System.Windows.Forms.Button
+    Friend WithEvents RGB_G_Ancient As System.Windows.Forms.NumericUpDown
+    Friend WithEvents Label22 As System.Windows.Forms.Label
+    Friend WithEvents RGB_G_Mythical As System.Windows.Forms.NumericUpDown
+    Friend WithEvents Label24 As System.Windows.Forms.Label
+    Friend WithEvents Label25 As System.Windows.Forms.Label
+    Friend WithEvents RGB_G_Uncommon As System.Windows.Forms.NumericUpDown
+    Friend WithEvents RGB_R_Ancient As System.Windows.Forms.NumericUpDown
+    Friend WithEvents Label26 As System.Windows.Forms.Label
+    Friend WithEvents RGB_R_Mythical As System.Windows.Forms.NumericUpDown
+    Friend WithEvents HexUncommon As System.Windows.Forms.TextBox
+    Friend WithEvents RGB_R_Uncommon As System.Windows.Forms.NumericUpDown
+    Friend WithEvents HexMythical As System.Windows.Forms.TextBox
+    Friend WithEvents RGB_G_Legendary As System.Windows.Forms.NumericUpDown
+    Friend WithEvents HexAncient As System.Windows.Forms.TextBox
+    Friend WithEvents RGB_G_Rare As System.Windows.Forms.NumericUpDown
+    Friend WithEvents RGB_G_Common As System.Windows.Forms.NumericUpDown
+    Friend WithEvents HexLegendary As System.Windows.Forms.TextBox
+    Friend WithEvents RGB_R_Legendary As System.Windows.Forms.NumericUpDown
+    Friend WithEvents HexRare As System.Windows.Forms.TextBox
+    Friend WithEvents RGB_R_Rare As System.Windows.Forms.NumericUpDown
+    Friend WithEvents RGB_R_Common As System.Windows.Forms.NumericUpDown
+    Friend WithEvents Label17 As System.Windows.Forms.Label
+    Friend WithEvents RaritiesToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
 End Class
