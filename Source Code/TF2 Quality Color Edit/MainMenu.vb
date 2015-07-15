@@ -1213,12 +1213,12 @@ Public Class MainMenu
     End Sub
 
     'Save file (Rarities)
-    Private Sub SaveButton3_Click() Handles SaveButton.Click, RaritiesToolStripMenuItem.Click
+    Private Sub SaveButton3_Click() Handles SaveButton3.Click, RaritiesToolStripMenuItem.Click
         If Not ResFile = Nothing Then
             Dim lines = File.ReadAllLines(ResFile)
             For x = 0 To lines.Count() - 1
                 If lines(x).Trim().StartsWith(Chr(34) & "ItemRarityCommon" & Chr(34)) Then
-                    lines(x) = "		" & Chr(34) & "ItemRarityCommon" & Chr(34) & "					" & Chr(34) & RGB_R_Common.Text & " " & RGB_G_Normal.Text & " " & RGB_B_Normal.Text & " 255" & Chr(34)
+                    lines(x) = "		" & Chr(34) & "ItemRarityCommon" & Chr(34) & "					" & Chr(34) & RGB_R_Common.Text & " " & RGB_G_Common.Text & " " & RGB_B_Common.Text & " 255" & Chr(34)
                 End If
                 If lines(x).Trim().StartsWith(Chr(34) & "ItemRarityUncommon" & Chr(34)) Then
                     lines(x) = "		" & Chr(34) & "ItemRarityUncommon" & Chr(34) & "					" & Chr(34) & RGB_R_Uncommon.Text & " " & RGB_G_Uncommon.Text & " " & RGB_B_Uncommon.Text & " 255" & Chr(34)

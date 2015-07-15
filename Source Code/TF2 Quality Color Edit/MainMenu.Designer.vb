@@ -2097,7 +2097,7 @@ Partial Class MainMenu
         '
         Me.TypeLabel.AutoSize = True
         Me.TypeLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TypeLabel.Location = New System.Drawing.Point(356, 24)
+        Me.TypeLabel.Location = New System.Drawing.Point(363, 24)
         Me.TypeLabel.Name = "TypeLabel"
         Me.TypeLabel.Size = New System.Drawing.Size(56, 13)
         Me.TypeLabel.TabIndex = 12
@@ -2153,43 +2153,43 @@ Partial Class MainMenu
         'OpenToolStripMenuItem
         '
         Me.OpenToolStripMenuItem.Name = "OpenToolStripMenuItem"
-        Me.OpenToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.OpenToolStripMenuItem.Size = New System.Drawing.Size(100, 22)
         Me.OpenToolStripMenuItem.Text = "Load"
         '
         'SaveToolStripMenuItem
         '
         Me.SaveToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.QualitiesToolStripMenuItem, Me.AttributesToolStripMenuItem, Me.RaritiesToolStripMenuItem})
         Me.SaveToolStripMenuItem.Name = "SaveToolStripMenuItem"
-        Me.SaveToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.SaveToolStripMenuItem.Size = New System.Drawing.Size(100, 22)
         Me.SaveToolStripMenuItem.Text = "Save"
         '
         'QualitiesToolStripMenuItem
         '
         Me.QualitiesToolStripMenuItem.Name = "QualitiesToolStripMenuItem"
-        Me.QualitiesToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.QualitiesToolStripMenuItem.Size = New System.Drawing.Size(126, 22)
         Me.QualitiesToolStripMenuItem.Text = "Qualities"
         '
         'AttributesToolStripMenuItem
         '
         Me.AttributesToolStripMenuItem.Name = "AttributesToolStripMenuItem"
-        Me.AttributesToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.AttributesToolStripMenuItem.Size = New System.Drawing.Size(126, 22)
         Me.AttributesToolStripMenuItem.Text = "Attributes"
         '
         'RaritiesToolStripMenuItem
         '
         Me.RaritiesToolStripMenuItem.Name = "RaritiesToolStripMenuItem"
-        Me.RaritiesToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.RaritiesToolStripMenuItem.Size = New System.Drawing.Size(126, 22)
         Me.RaritiesToolStripMenuItem.Text = "Rarities"
         '
         'ToolStripSeparator1
         '
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(149, 6)
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(97, 6)
         '
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(100, 22)
         Me.ExitToolStripMenuItem.Text = "Exit"
         '
         'ColorsToolStripMenuItem
@@ -2202,13 +2202,13 @@ Partial Class MainMenu
         'DefaultToolStripMenuItem
         '
         Me.DefaultToolStripMenuItem.Name = "DefaultToolStripMenuItem"
-        Me.DefaultToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.DefaultToolStripMenuItem.Size = New System.Drawing.Size(136, 22)
         Me.DefaultToolStripMenuItem.Text = "Default"
         '
         'DioJoestarsToolStripMenuItem
         '
         Me.DioJoestarsToolStripMenuItem.Name = "DioJoestarsToolStripMenuItem"
-        Me.DioJoestarsToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.DioJoestarsToolStripMenuItem.Size = New System.Drawing.Size(136, 22)
         Me.DioJoestarsToolStripMenuItem.Text = "DioJoestar's"
         '
         'HelpToolStripMenuItem

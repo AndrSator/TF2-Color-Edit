@@ -10,8 +10,9 @@ TF2 Color Edit by Dio Joestar is licensed under a [Creative Commons Attribution-
 
 Last Changes
 ============
-######Version 1.1.0.0
-* Added colors for rarities
+######Version 1.1.0.1
+* Fixed Save button not working
+* Fixed Civilian Green and Blue values not working
 
 Screenshots
 ============

@@ -1,4 +1,8 @@
-﻿	Version 1.1.0.0
+﻿	Version 1.1.0.1
+- Fixed Save button not working
+- Fixed Civilian Green and Blue values not working
+
+	Version 1.1.0.0
 - Added colors for rarities
 
 	Version 1.0.0.2
