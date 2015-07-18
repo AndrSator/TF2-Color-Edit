@@ -1237,7 +1237,7 @@ Public Class MainMenu
                 End If
             Next
             File.WriteAllLines(ResFile, lines)
-            Status.Text = "Qualities saved!"
+            Status.Text = "Rarities saved!"
             Status.BackColor = Color.FromArgb(240, 240, 240)
         Else
             Status.Text = "Res file not found!"
