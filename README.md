@@ -25,6 +25,4 @@ Get the last version from GitHub right [here](https://github.com/DioJoestar/TF2-
 
 ######Mirrors
 * [Gamebanana] (http://tf2.gamebanana.com/tools/5700)
-* [Spanish Development Kit (OnlineSDK)] (http://onlinesdk.webege.com/recursos/TF2%20Color%20Edit.zip)
 * [Dropbox] (https://dl.dropboxusercontent.com/u/12664902/TF2%20Color%20Edit.zip)
-
